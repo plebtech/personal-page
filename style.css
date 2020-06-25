@@ -25,3 +25,61 @@ body {
     line-height: 1.6;
     font-size: 1.2em;
 }
+
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+hr {
+    margin: 1% 5%;
+    border: 1px solid #043642;
+    padding: 1px;
+    background-color: #eee8d5;
+}
+
+#controls {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+#controls > a {
+    border: 2px solid #eee8d5;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+#output {
+    border: 2px solid #073642;
+    background-color: #fdf6e3;
+}
+#output > * {
+    color: #002b36;
+}
+#output > p {
+    font-size: 1.2em;
+}
+#output > h3 > a {
+    padding: 1px;
+    background-color: #073642;
+    line-height: 0.5;
+}
+
+.card {
+    display: flex;
+    flex-flow: column;
+    border: 2px solid #073642;
+    background-color: #002b36;
+}
+.card > h2 {
+    display: flex;
+    justify-content: space-around;
+    background-color: #073642;
+}
+
+.card > h4 {
+    background-color: #073642;
+    font-size: 1.2em;
+}
+.card > p {
+    font-size: 1.2em;
+}
