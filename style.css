@@ -3,18 +3,12 @@
     padding: 1%;
     font-family: monospace;
     color: #fdf6e3;
-    background-color: #002b36;
-}
-
-html {
-    margin: 0px;
-    padding: 0px;
-    background-image: linear-gradient(0deg, #002b36, #eee8d5);
 }
 
 body {
     max-width: 960px;
     margin: 1% auto;
+    padding: 1%;
     border-width: 1%;
     border-style: solid;
     border-image: linear-gradient(180deg, #002b36, #eee8d5) 10;
@@ -63,6 +57,16 @@ hr {
     background-color: #073642;
     line-height: 0.5;
 }
+
+.stambul {
+	padding: 2%;
+	background-color: #000;
+	background-image: url('img/stambul_green_bright.gif');
+	background-size: auto;
+	background-attachment: fixed;
+	text-align: center;
+}
+
 
 .card {
     display: flex;
