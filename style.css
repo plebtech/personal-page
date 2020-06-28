@@ -5,6 +5,11 @@
     color: #fdf6e3;
 }
 
+a {
+    margin: auto;
+    padding: 0px;
+}
+
 body {
     max-width: 960px;
     margin: 1% auto;
@@ -13,7 +18,6 @@ body {
     border-style: solid;
     border-image: linear-gradient(180deg, #002b36, #eee8d5) 10;
     background-color: #002b36;
-    /* background-image: linear-gradient(0deg, #002b36, #eee8d5); */
     background-image: url('img/stambul_073642.gif');
 	background-size: auto;
 	background-attachment: fixed;
@@ -28,11 +32,10 @@ h1, h2, h3 {
     line-height: 1.3;
 }
 
-ul {
+ul, li {
+    margin: 0px;
+    padding: 0px;
     display: block;
-    padding: 1%;
-    border: 1px solid #586e7525;
-    background-color: #002b3650;
     list-style: none;
     text-align: left;
 }
@@ -77,15 +80,49 @@ hr {
     line-height: 0.5;
 }
 
-.stambul {
-	padding: 2%;
-	background-color: #000;
-	background-image: url('img/stambul_green_bright.gif');
-	background-size: auto;
-	background-attachment: fixed;
-	text-align: center;
+.wrap-silent {
+    margin: 0;
+    padding: 0;
 }
 
+.mp-header {
+    margin: 1% 1%;
+    border: 1px solid #002b36;
+    background-color: #586e7525;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mp-sub {
+    display: inline;
+    float: left;
+    margin: 0 1%;
+    border: 1px solid #002b36;
+    background-color: #002b3675;
+    /* background: linear-gradient(90deg, #002b3615, #fdf6e325); */
+    font-weight: bold;
+    text-align: left;
+}
+
+.mp-sub > p {
+    display: inline;
+    margin: 1%;
+    background-color: #002b3675;
+}
+
+.mp-item {
+    clear: both;
+    margin: 1%;
+    border: 1px solid #002b36;
+    background-color: #002b3650;
+    /* background: linear-gradient(90deg, #002b3615, #fdf6e325); */
+    text-align: left;
+}
+
+.mp-item > p {
+    background-color: #00000015;
+}
 
 .card {
     display: flex;
