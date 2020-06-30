@@ -1,14 +1,16 @@
+// DOMContentLoaded required with scripts loaded in <head> of html.
+// 'boot loader' of script.
 document.addEventListener("DOMContentLoaded", () => {
     console.log("loading..");
     tabsListen();
     onLoad();
 });
 
+// adds click listener for every instance of .mp-sub class.
 const tabsListen = () => {
     const tabs = document.querySelectorAll('.mp-sub');
     tabs.forEach(function (tab) {
         tab.addEventListener('click', nextDivToggle);
-        tab.style.cursor = 'pointer';
     });
 }
 

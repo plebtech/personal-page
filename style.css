@@ -98,7 +98,6 @@ hr {
 }
 
 .mp-sub {
-    display: inline;
     float: left;
     margin: 0 1%;
     border: 1px solid #002b36;
@@ -106,6 +105,7 @@ hr {
     /* background: linear-gradient(90deg, #002b3615, #fdf6e325); */
     font-weight: bold;
     text-align: left;
+    cursor: pointer;
 }
 
 .mp-sub > p {
