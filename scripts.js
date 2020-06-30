@@ -34,26 +34,3 @@ function sfToggle() {
         screenfetch.style.display = 'block';
     }
 }
-
-
-
-// document.addEventListener("DOMContentLoaded", (event) => {
-//     console.log("loading...");
-
-
-
-//     const toggleTabs = document.querySelectorAll('.mp-sub');
-//     toggleTabs.forEach( function (tab) {
-//         tab.addEventListener("click", tabClicked);
-//     });
-
-//     const tabClicked = (e) => {
-//         console.log(e);
-//     }
-
-//     const sfToggle = () => {
-//         console.log(this);
-//     }
-
-//     console.log("loaded.");
-// });
