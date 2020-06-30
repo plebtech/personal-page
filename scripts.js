@@ -14,6 +14,7 @@ const tabsListen = () => {
     });
 }
 
+// checks display style of each .mp-item (by referencing nextElementSibling of .mp-sub) and toggles between 'block' and 'none'.
 const nextDivToggle = (e) => {
     const nt = e.target.nextElementSibling;
     const nts = getComputedStyle(nt).getPropertyValue('display');
@@ -26,13 +27,4 @@ const nextDivToggle = (e) => {
 
 const onLoad = () => {
     console.log("loaded.");
-}
-
-function sfToggle() {
-    if (screenfetch.style.display == 'block') {
-        screenfetch.style.display = 'none';
-    }
-    else {
-        screenfetch.style.display = 'block';
-    }
 }
