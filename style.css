@@ -32,13 +32,13 @@ h1, h2, h3 {
     line-height: 1.3;
 }
 
-ul, li {
+/* ul, li {
     margin: 0px;
     padding: 0px;
     display: block;
     list-style: none;
     text-align: left;
-}
+} */
 
 p {
     border: 1px solid #586e7525;
@@ -128,6 +128,22 @@ hr {
     background-color: #00000015;
 }
 
+.news-list {
+    margin: 1% 2%;
+    padding: 1% 2%;
+    list-style: none;
+    background-color: #00000015;
+}
+
+.news-list > li {
+    margin: 0px 2%;
+    padding: 0px 2%;
+}
+
+.news-list > li:before {
+    content: " - ";
+}
+
 .card {
     display: flex;
     flex-flow: column;
@@ -149,5 +165,7 @@ hr {
 }
 
 .strike {
+    margin: 0px;
+    padding: 0px;
     text-decoration: line-through;
 }
