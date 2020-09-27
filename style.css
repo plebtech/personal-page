@@ -147,3 +147,7 @@ hr {
 .card > p {
     font-size: 1.2em;
 }
+
+.strike {
+    text-decoration: line-through;
+}
