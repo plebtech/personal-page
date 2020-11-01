@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+	<head>
+
+	    <meta charset = "utf-8">
+	    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<meta name = "author" content = "anon">
+
+	    <title>rekt.undo.it</title>
+
+	    <!-- cache fonts from google -->
+	    <link rel = "stylesheet" href = "http://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|VT323|Source+Code+Pro" />
+
+	    <!-- custom sheet loads last -->
+	    <link href = "default.css" rel = "stylesheet" />
+
+	</head>
+
+	<script type ="text/javascript">
+  		function sfToggle() {
+  			if (screenfetch.style.display == 'block') {
+  				screenfetch.style.display = 'none';
+  			}
+  			else {
+  				screenfetch.style.display = 'block';
+  			}
+  		}
+  	</script>
+
+	<body class = "stambul">
+
+	    <div id = "main_body">
+
+	    	<div class = "main_header">
+
+				<div class = "mast">
+					<div class = "mast_h1">rekt.undo.it</div>
+					<div class = "mast_h2"><a href="index.shtml">news</a></div>
+					<div class = "mast_h2">
+						<a href = "#" onclick = "sfToggle(); return false">screenfetch</a>
+					</div>
+					<div class = "mast_h2"><a href="fib.shtml">fibonacci</a></div>
+					<div class = "mast_h2"><a href="jnug_reversion.txt">jnug reversion</a></div>
+					<div class = "mast_h2"><a href="901.shtml">901</a></div>
+					<div class = "mast_h2"><a href="902.shtml">902</a></div>
+				</div>
+
+			</div>
+
+			<div id = "screenfetch"><!--#include virtual = "/screenfetch.txt"> --></div>
+
+			<div class = "main_news">
+
+				<div class = "main_h2">to do</div>
+				<div class = "main_h2">----------</div>
+
+				<div class = "main_block_text">- Home storage server: four drive minimum. freeNAS zfs? raid 1+0 on debian? old Athlon II x3 good enough? Run headless/KVM.</div>
+				<div class = "main_block_text">- Still need off-site backup for critical files. Research cheap options.</div>
+				<div class = "main_block_text">Other:</div>
+				<div class = "main_block_text">
+					<ul style = "margin-bottom: 5%">
+						<li>explore VM (hyper-v for win8)</li>
+						<li>need one UPS</li>
+						<li>longer cabling (cat6a?)</li>
+					</ul>
+				</div>
+				<div class = "main_block_text">Literature:</div>
+				<div class = "main_block_text">
+					<ul style = "margin-bottom: 5%">
+						<li class = "line_through"><em>Resistance, Rebellion, and Death</em> - Camus</li>
+						<li class = "line_through"><em>The Stranger</em> - Camus</li>
+						<li><em>What is Art?</em> - Tolstoy</li>
+						<li><em>Demons</em> - Dostoyevsky</li>
+						
+					</ul>
+				</div>
+
+				<div class = "main_h2">resources</div>
+				<div class = "main_h2">----------</div>
+
+				<div class = "main_h2">web dev</div>
+				<div class = "main_block_text">
+					<ul style = "margin-bottom: 5%">
+						<li><a href="https://developer.mozilla.org/en-US/">MDN web docs</a> - html/css reference.</li>
+						<li><a href="http://216.codes/">Websafecolors.info</a> - websafe color palette.</li>
+						<li><a href="http://njal.la/">Njalla</a> - privacy-aware domain registration.</li>
+						<li><a href="http://idlewords.com/talks/website_obesity.htm">The Website Obesity Crisis</a> - Maciej Ceglowski's diatribe against bloated design.</li>
+						
+					</ul>
+				</div>
+
+				<div class = "main_h2">programming</div>
+				<div class = "main_block_text">
+					<ul style = "margin-bottom: 5%">
+						<li><a href="http://introcs.cs.princeton.edu/java/home/">Introduction to Programming in Java</a> - companion site to CS201 textbook.</li>
+						<li><a href="http://introcs.cs.princeton.edu/python/home/">Introduction to Programming in Python</a> - see above.</li>
+						<li><a href="https://painlessprogramming.blogspot.hr/">Painless Programming</a> - blog with some scant programming practice.</li>
+						<li><a href="img/1506722710443.png">want to be a hacker</a>?</li>
+						<li><a href="https://boards.4chan.org/g/thread/62918956">/g/ - Game of Life</a> - Conway's Game of Life</li>
+						<li><a href="https://archive.rebeccablacktech.com/g/thread/62805266/">/g/ img manipulation</a></li>
+						<li><a href="https://archive.rebeccablacktech.com/g/thread/62823481/">/g/ img manipulation pt 2</a></li>
+					</ul>
+				</div>
+
+				<div class = "main_h2">misc</div>
+				<div class = "main_block_text">
+					<ul style = "margin-bottom: 5%">
+						<li><a href="https://arisuchan.jp/cyb/">/cyb/</a> - cyberpunk and cybersecurity</li>
+						<li><a href="http://protonvpn.com">ProtonVPN</a> - 'free' vpn.</li>
+						<li><a href="http://archive.is/4xwyC">surveillance is the business model of the internet</a>.</li>
+						<li><a href="img/1505076995248.png">alternative social media</a>.</li>
+						<li style = "margin-top: 1%">---</li>
+						<li><a href="https://www.quantopian.com/posts/zero-commission-algorithmic-trading-robinhood-and-quantopian">Zero Commission Algorithmic Trading</a> - discussion of using Quantopian and Robinhood together.</li>
+						<li style = "margin-top: 1%">---</li>
+						<li><a href="http://www.total-gym-exercises.com/exercises/index.html">Total Gym Exercises</a> - weight resistance exercises.</li>
+
+					</ul>
+				</div>
+			
+			</div>
+
+			<div class="main_footer">
+	    		<div class="in_footer_left">Dynamic DNS provided by <a href="http://freedns.afraid.org/">Free DNS</a>. rekt.undo.it<!--#echo var="DOCUMENT_URI" -->, served <!--#echo var="DATE_LOCAL"-->.</div>
+	    		<div class="in_footer_right">plsnosteal.</div>
+	    	</div>
+		
+		</div>
+
+	</body>
+  
+</html>

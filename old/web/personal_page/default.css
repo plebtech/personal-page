@@ -1,0 +1,489 @@
+/* +BODY+
+---------- */
+body {
+	max-width: 960px;
+	margin: auto;
+	margin-bottom: 2%;
+	color: #0fc;
+}
+
+.stambul {
+	padding: 2%;
+	background-color: #000;
+	background-image: url('img/stambul_green_bright.gif');
+	background-size: auto;
+	background-attachment: fixed;
+	text-align: center;
+}
+
+#main_body {
+	max-width: 95%;
+	margin: auto;
+	padding: 1%;
+	background-color: #0fc;
+	background-image: url('img/stambul_green.gif');
+	background-size: auto;
+	background-attachment: fixed;
+	border: 2px solid #096;
+	border-radius: 10px;
+}
+
+/* +ANCHOR+
+---------- */
+a:link {
+	color: #666;
+}
+a:hover {
+	color: #999;
+}
+a:visited {
+	color: #999;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	padding: 2px;
+	border: 1px solid #000;
+}
+
+h1 {
+    font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px #aaa;
+}
+h2 {
+    color: #fff;
+    font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+    font-size: 1.75em;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #000;
+}
+h3 {
+	font-size: 1.2em;
+	font-weight: 800;
+}
+
+ul {
+	list-style-type: none;
+	margin: auto;
+}
+
+.lolite {
+	background-color: #555;
+	color: #eee;
+	margin: auto;
+}
+.nolite {
+	background-color: #ccc;
+	border-top: 2px solid #eee;
+	margin: auto;
+}
+.no2lite {
+	background-color: #ddd;
+	border-top: 2px solid #eee;
+	margin: auto;
+}
+.no2lite a:link {
+	color: #999 !important;
+}
+.no2lite a:visited {
+	color: #999 !important;
+}
+
+.s3_left {
+	text-align: left;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	padding: 2%;
+}
+
+.s3_right {
+	text-align: right;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	padding: 2%;
+}
+
+.s3_block {
+	text-align: center;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	background-color: #555;
+	font-size: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+	padding: 2%;
+	margin: 2%;
+	border: 4px solid #aaa; 
+}
+
+.s4_left {
+	text-align: left;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	padding: 1%;
+}
+
+.s4_mid {
+	text-align: center;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	padding: 1%;
+}
+
+.s4_right {
+	text-align: right;
+	font-family: "Goudy Bookletter 1911", "Century Gothic", AppleGothic, Arial, sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	padding: 1%;
+}
+
+.s4_right ul {
+	list-style: square;
+	text-align: left;
+}
+
+.s7_right {
+	text-align: right;
+	font-family: "Goudy Bookletter 1911", "Century Gothic", AppleGothic, Arial, sans-serif;
+	font-size: 1.3em;
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+	padding: 2%;
+}
+
+.paragraph {
+	font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+}
+.paragraph a {
+	color: #555;
+}
+.paragraph a:hover {
+	color: #aaa;
+}
+.paragraph a:visited {
+	color: #aaa;
+}
+
+.list_table {
+	padding-bottom: 2%;
+	margin: auto;
+	display: table;
+	font-size: 1.1em;
+}
+
+.main_header {
+	position: relative;
+	font-family: 'Libre Barcode 39 Text', monospace;
+	font-size: 3em;
+	text-align: center;
+    text-shadow: 2px 2px 2px #444;
+    padding: 1%;
+    overflow: hidden;
+}
+
+.mast {
+	background-color: #000;
+	border: 1px solid #096;
+	overflow: hidden;
+}
+.mast_h1 {
+	display: inline;
+	float: left;
+	margin: auto;
+	padding: 1%;
+}
+.mast_h2 {
+	display: inline;
+	float: left;
+	margin: auto;
+	padding: 1%;
+	font-family: 'Source Code Pro', monospace;
+	font-size: .35em;
+}
+
+.main_news {
+	clear: both;
+	background-color: #000;
+	border: 1px solid #096;
+	display: block;
+	margin: 1%;
+	padding: 1%;
+}
+
+.main_news a:link {
+	color: #bbb;
+}
+.main_news a:visited {
+	color: #999;
+}
+.main_news a:hover {
+	color: #ccc;
+}
+
+
+.main_h1 {
+    background-color: #131;
+    text-align: left;
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 1%;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.main_h2 {
+    text-align: left;
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 1%;
+}
+
+.main_block_text {
+	text-align: left;
+	font-family: 'Source Code Pro', monospace;
+	font-size: .8em;
+	font-weight: normal;
+    margin: 1%;
+}
+
+.main_footer {
+	overflow: hidden;
+	display: block;
+	background-color: #000;
+	border: 1px solid #096;
+	margin: 1%;
+	padding: 1%;
+	text-align: left;
+	font-family: 'VT323', monospace;
+	font-size: 1.1em;
+}
+
+.news_item {
+	border-left: 2px solid #131;
+}
+
+.in_footer_left {
+	float: left;
+}
+
+.in_footer_right {
+	float: right;
+}
+
+.preformat {
+	display: inline-block;
+	width: auto;
+	margin: auto;
+	padding: 1%;
+	border: 1px solid #096;
+	white-space: pre-wrap;
+	color: #3cf;
+	text-align: left;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 11px;
+}
+
+.line_through {
+	text-decoration: line-through;
+}
+
+/* +A++
+---------- */
+
+.a_plus_main {
+	clear: both;
+	background-color: #000;
+	border: 1px solid #096;
+	display: block;
+	margin: 1%;
+	padding: 1%;
+}
+
+.a_plus_main a:link {
+	color: #bbb;
+}
+.a_plus_main a:visited {
+	color: #999;
+}
+.a_plus_main a:hover {
+	color: #ccc;
+}
+
+
+.a_plus_h1 {
+	background-color: #040;
+    text-align: left;
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 1%;
+    cursor: pointer;
+}
+
+.a_plus_h2 {
+	background-color: #030;
+    text-align: left;
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 1%;
+}
+
+.a_plus_block {
+	background-color: #000;
+	text-align: left;
+	font-family: 'Source Code Pro', monospace;
+	font-size: .8em;
+	font-weight: normal;
+    margin: 1% 1% 1% 2%;
+}
+
+.a_plus_block img {
+	max-width: 50%;
+	margin: auto;
+	display: block;
+}
+
+.a_plus_block span {
+	background-color: #030;
+}
+
+.a_plus_block_lighter {
+	background-color: #111;
+	text-align: left;
+	font-family: 'Source Code Pro', monospace;
+	font-size: .8em;
+	font-weight: normal;
+    margin: 1% 1% 1% 2%;
+}
+
+.a_plus_block_lighter img {
+	max-width: 50%;
+	margin: auto;
+	display: block;
+}
+
+.a_plus_block_lighter span {
+	background-color: #030;
+}
+
+.a_plus_block_close {
+	background-color: #020;
+	text-align: center;
+	font-family: 'Source Code Pro', monospace;
+	font-size: .8em;
+	font-weight: normal;
+    margin: 1% 1% 1% 2%;
+    cursor: pointer;
+}
+
+.bufferUp {
+	margin-top: 2%;
+}
+
+.divider {
+	border-top: 1px solid #003300;
+	margin-top: 2%;
+}
+
+.table_901 {
+	border: 1px solid #003300;
+	margin: auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	table-layout: ;
+}
+
+.table_901_tr {
+
+}
+
+.table_901_tr_lighter {
+	background-color: #111;
+}
+
+.table_901_tr_lightest {
+	background-color: #222;
+}
+
+.table_901 td {
+	text-align: center;
+}
+
+.table_901 th {
+	background-color: #003300;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.table_901 li {
+	margin-left: 0px;
+}
+
+.list_divider {
+	border-top: 1px solid #003300;
+	border-left: 1px solid #003300;
+}
+
+#one_one {
+	display: none;
+}
+
+#one_two {
+	display: none;
+}
+
+#one_three {
+	display: none;
+}
+
+#one_four {
+	display: none;
+}
+
+#one_five {
+	display: none;
+}
+
+#one_six {
+	display: block;
+}
+
+/* +SCREENFETCH+
+---------- */
+
+#screenfetch {
+	position: relative;
+	display: none;
+	overflow: hidden;
+	z-index: 1;
+	width: 425px;
+	margin: auto;
+	padding: 1%;
+	border: 1px solid #096;
+	background: #000;
+	white-space: pre-wrap;
+	color: #3cf;
+	text-align: left;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 10px;
+	font-weight: normal;
+}

@@ -1,0 +1,83 @@
+body {
+	margin-top: 25px;
+	background-color: #eee;
+}
+
+a {
+	color: #fff;
+}
+
+a:hover {
+	color: #fff;
+}
+
+a:visited {
+	color: #fff;
+}
+
+table {
+	margin: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.lolite {
+	background-color: #555;
+	color: #eee;
+	border-top: 2px solid #eee;
+}
+
+.td-left {
+	max-width: 30%;
+	text-align: left;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	font-size: 1.25em;
+	font-weight: 600;
+	padding: 2px;
+	padding-left: 10px;
+}
+
+.td-right {
+	max-width: 70%;
+	text-align: right;
+	font-family: "Goudy Bookletter 1911", "Century Gothic", AppleGothic, Arial, sans-serif;
+	font-size: 1.25em;
+	padding: 2px;
+	padding-right: 10px;
+}
+
+.td-center {
+	width:100%;
+	padding: 10px;
+	text-align: center;
+	font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.nolite {
+	background-color: #bbb;
+	font-size: 1.1em;
+	border-top: 2px solid #eee;
+}
+
+
+
+h1 {
+    font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+    font-size: 2.5em;
+    text-shadow: 4px 4px 4px #aaa;
+    text-align: center;
+}
+
+.paragraph {
+	padding: 5px;
+	font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+}
+
+.td-center > ul {
+	margin: auto;
+	text-align: left;
+	font-size: 1em;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+	<head>
+
+	    <meta charset = "utf-8">
+	    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<meta name = "author" content = "anon">
+
+	    <title>rekt.undo.it</title>
+
+	    <!-- cache fonts from google -->
+	    <link rel = "stylesheet" href = "http://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|VT323|Source+Code+Pro" />
+
+	    <!-- custom sheet loads last -->
+	    <link href = "default.css" rel = "stylesheet" />
+
+	</head>
+
+	<script type ="text/javascript">
+  		function sfToggle() {
+  			if (screenfetch.style.display == 'block') {
+  				screenfetch.style.display = 'none';
+  			}
+  			else {
+  				screenfetch.style.display = 'block';
+  			}
+  		}
+  	</script>
+
+	<body class = "stambul">
+
+	    <div id = "main_body">
+
+	    	<div class = "main_header">
+
+				<div class = "mast">
+					<div class = "mast_h1">rekt.undo.it</div>
+					<div class = "mast_h2">
+						<a href = "#" onclick = "sfToggle(); return false">screenfetch</a>
+					</div>
+					<div class = "mast_h2"><a href="resources.shtml">resources</a></div>
+					<div class = "mast_h2"><a href="fib.shtml">fibonacci</a></div>
+					<div class = "mast_h2"><a href="jnug_reversion.txt">jnug reversion</a></div>
+					<div class = "mast_h2"><a href="901.shtml">901</a></div>
+					<div class = "mast_h2"><a href="902.shtml">902</a></div>
+				</div>
+
+			</div>
+
+			<div id = "screenfetch"><!--#include virtual = "/screenfetch.txt"> --></div>
+
+			<div class = "main_news">
+
+				<div class = "news_item">
+					<div class = "main_h1">jan 8. new job.</div>
+					<div class = "main_block_text">started first IT job, part-time field tech. should average about 20 hours a week so hoping there will still be time to continue studying and improving skills.</div>
+				</div>
+				<div class = "news_item">
+					<div class = "main_h1">oct 17. refreshing java.</div>
+					<div class = "main_block_text"><a href = "java/">java/</a> directory filling up as I work through textbook examples, lab assignments and old test questions (all from a previous course).</div>
+					<div class = "main_block_text">installed JRE on server, coding in nano through ssh to familiarize with terminal/console crap. Probably gonna need something more elegant, but don't particularly want an IDE at the moment...</div>
+				</div>
+
+				<div class = "news_item">
+					<div class = "main_h1">oct 10. lol 'content'.</div>
+					<div class = "main_block_text">New: <a href = "fib.shtml">short article</a> on an old fibonacci sequence program and a Python financial reversion <a href = "jnug_reversion.txt">algorithm in plaintext</a>.</div>
+				</div>
+
+				<div class = "news_item">
+					<div class = "main_h1">oct 09. robot status: DISALLOWED.</div>
+					<div class = "main_block_text">Good robots listen to <a href="robots.txt">robots.txt</a>.</div>
+				</div>
+
+				<div class = "news_item">
+					<div class = "main_h1">sept 28. dynamic dns enabled.</div>
+					<div class = "main_block_text">Configured dynamic DNS through <a href="http://freedns.afraid.org/">Free DNS</a>. Subdomain: <a href="http://rekt.undo.it">rekt.undo.it</a>.</div>
+				</div>
+
+				<div class = "news_item">
+					<div class = "main_h1">sept 27.<del style = "color: #666;"> to do </del>done.</div>
+					<div class = "main_block_text">More spitshine, scripted <a href="https://github.com/KittyKatt/screenFetch">screenfetch</a> for web display.</div>
+				</div>
+
+				<div class = "news_item">
+					<div class = "main_h1">sept 25. imac-4-1 online.</div>
+					<div class = "main_block_text">Converted old Mac into test server. Early Macintel - 2006 20" iMac Core Duo ('iMac4,1' internally) - 32-bit processor limits use. Could've upped to Core 2 Duo for 64-bit addressing, further  OS X upgrades, more memory...</div>
+					<div class = "main_block_text" style = "font-weight: bold">Slapped <a href="https://www.debian.org/">Debian</a> on it instead.</div>
+					<div class = "main_block_text">Not as easy as it sounds -- 4,1 had funky 32-bit EFI and rootless SIP to obfuscate boot loader access. <a href="http://www.rodsbooks.com/refind/">rEFInd was key</a> in bypassing this.</div>
+					<div class = "main_block_text">More to come.</div>
+				</div>
+			
+			</div>
+
+			<div class="main_footer">
+	    		<div class="in_footer_left">Dynamic DNS provided by <a href="http://freedns.afraid.org/">Free DNS</a>. rekt.undo.it<!--#echo var="DOCUMENT_URI" -->, served <!--#echo var="DATE_LOCAL"-->.</div>
+	    		<div class="in_footer_right">plsnosteal.</div>
+	    	</div>
+		
+		</div>
+
+	</body>
+  
+</html>

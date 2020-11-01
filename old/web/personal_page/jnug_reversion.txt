@@ -1,0 +1,87 @@
+try:
+    
+    # if price is down and it is at or below the 38% threshold buy
+    if (Secur[sec].np < Secur[sec].lp) & (Secur[sec].np <= Secur[sec]._38):
+        # if change is greater than 5% buy + 1
+        if (Secur[sec].np / Secur[sec].lp) > .05:
+            Secur[sec].ba = (Secur[sec].lba + 1)
+            order(sec, Secur[sec].ba)
+            #_llba = Secur[sec].lba
+            Secur[sec].lba = Secur[sec].ba
+            Secur[sec].lp = Secur[sec].np
+            Secur[sec].shares = Secur[sec].shares + Secur[sec].ba
+            print(str(sec) + " down " + str(_change) + ". Bought " + str(Secur[sec].lba) + " shares at " + str(Secur[sec].np) + ". Total shares are " + str(Secur[sec].shares) + ". Total value = " + str(context.portfolio.portfolio_value) + ".")
+        # if change is less than 5% but greater than 1% buy
+        elif (Secur[sec].np / Secur[sec].lp) > .01:
+            Secur[sec].ba = Secur[sec].lba
+            order(sec, Secur[sec].ba)
+            #_llba = Secur[sec].lba
+            Secur[sec].lba = Secur[sec].ba
+            Secur[sec].lp = Secur[sec].np
+            Secur[sec].shares = Secur[sec].shares + Secur[sec].ba
+            print(str(sec) + " down " + str(_change) + ". Bought " + str(Secur[sec].lba) + " shares at " + str(Secur[sec].np) + ". Total shares are " + str(Secur[sec].shares) + ". Total value = " + str(context.portfolio.portfolio_value) + ".")
+        # else (i.e. if less than 1% change) buy the same number of shares as the last buy transaction
+        else:
+            Secur[sec].ba = (Secur[sec].lba - 1)
+            order(sec, Secur[sec].ba)
+            #_llba = Secur[sec].lba
+            Secur[sec].lba = Secur[sec].ba
+            Secur[sec].lp = Secur[sec].np
+            Secur[sec].shares = Secur[sec].shares + Secur[sec].ba
+            print(str(sec) + " down " + str(_change) + ". Bought " + str(Secur[sec].lba) + " shares at " + str(Secur[sec].np) + ". Total shares are " + str(Secur[sec].shares) + ". Total value = " + str(context.portfolio.portfolio_value) + ".")
+            return
+            
+    # if price is up and it is at or above the 61% threshold sell          
+    elif (Secur[sec].np > Secur[sec].lp) & (Secur[sec].np >= _61):
+            # if change is greater than 5% sell +5
+            if (Secur[sec].shares > 2) & (abs((_sa + 1)) < Secur[sec].shares) & ((Secur[sec].lp / Secur[sec].np) > .05):
+                _sa = (_lsa + 5)
+                order(sec, (-1 * abs(_sa)))
+                Secur[sec].shares = Secur[sec].shares - _sa
+                #_llsa = _lsa
+                _lsa = _sa
+                Secur[sec].lp = Secur[sec].np
+                print(str(sec) + " up " + str(_change) + ". Sold " + str(_lsa) + " shares at " + str(Secur[sec].np) + ". Total shares are " + str(Secur[sec].shares) + ". Total value = " + str(context.portfolio.portfolio_value) + ".")
+            # if change is less than 5% but greater than 1% sell +1
+            elif (Secur[sec].shares > 2) & (abs((_sa + 1)) < Secur[sec].shares) & ((Secur[sec].lp / Secur[sec].np) > .025):
+                _sa = (_lsa + 1)
+                order(sec, (-1 * abs(_sa)))
+                Secur[sec].shares = Secur[sec].shares - _sa
+                #_llsa = _lsa
+                _lsa = _sa
+                Secur[sec].lp = Secur[sec].np
+                print(str(sec) + " up " + str(_change) + ". Sold " + str(_lsa) + " shares at " + str(Secur[sec].np) + ". Total shares are " + str(Secur[sec].shares) + ". Total value = " + str(context.portfolio.portfolio_value) + ".")
+            # else (i.e. if less than 1% change) sell the same number of shares as the last buy transaction
+            elif (Secur[sec].shares > 2) & (abs((_sa + 1)) < Secur[sec].shares) & ((Secur[sec].lp / Secur[sec].np) > 0):
+                _sa = _lsa
+                order(sec, (-1 * abs(_sa)))
+                Secur[sec].shares = Secur[sec].shares - _sa
+                #_llsa = _lsa
+                _lsa = _sa
+                Secur[sec].lp = Secur[sec].np
+                print(str(sec) + " up " + str(_change) + ". Sold " + str(_lsa) + " shares at " + str(Secur[sec].np) + ". Total shares are " + str(Secur[sec].shares) + ". Total value = " + str(context.portfolio.portfolio_value) + ".")
+            # prevents trying to sell more shares than you hold
+            elif (Secur[sec].shares > 0) & ((Secur[sec].lp / Secur[sec].np) > .10):
+                _sa = Secur[sec].shares
+                order(sec, (-1 * abs(_sa)))
+                #_llsa = _lsa
+                _lsa = _sa
+                Secur[sec].shares = 0
+                Secur[sec].lp = Secur[sec].np
+                print(str(sec) + " up " + str(_change) + ". Sold " + str(_lsa) + " shares at " + str(Secur[sec].np) + ". Total shares are " + str(Secur[sec].shares) + ". Total value = " + str(context.portfolio.portfolio_value) + ".")
+            else:
+                return
+            
+    else:
+        return
+        
+except NameError:
+    Secur[sec].lp = data.current(sec, 'price') + .01
+    Secur[sec].lba = 1
+    #_llba = 0
+    
+def record_vars(context, data):
+    record(
+        JNUG_P=data.current(symbol('JNUG'), 'price'),
+        JNUG_SA=context.portfolio.positions[symbol('JNUG')].amount)
+        """

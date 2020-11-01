@@ -1,0 +1,149 @@
+body {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	background-color: #eee;
+}
+
+a {
+	color: #fff;
+}
+
+a:hover {
+	color: #fff;
+}
+
+a:visited {
+	color: #fff;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	border: 1px solid #000;
+}
+
+h1 {
+    padding: 1%;
+    text-align: center;
+    font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+h2 {
+    padding-bottom: 1%;
+    text-align: center;
+    color: #fff;
+    font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+    font-size: 1.75em;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #000;
+}
+
+h3 {
+	padding-bottom: 1%;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 800;
+}
+
+.lolite {
+	background-color: #555;
+	color: #eee;
+	border-top: 2px solid #eee;
+	margin: auto;
+	margin-top: 2%;
+}
+
+.nolite {
+	background-color: #ccc;
+	border-top: 2px solid #eee;
+	margin: auto;
+}
+
+.no2lite {
+	background-color: #ddd;
+	border-top: 2px solid #eee;
+	margin: auto;
+}
+
+.no2lite a:link {
+	color: #999 !important;
+}
+
+.no2lite a:visited {
+	color: #999 !important;
+}
+
+.s3-left {
+	text-align: left;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	padding: 2%;
+}
+
+.s4-left {
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	padding: 1%;
+}
+
+.s4-mid {
+	text-align: center;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #000;
+	font-size: 1.5em;
+	padding: 1%;
+}
+
+.s4-right {
+	font-family: "Goudy Bookletter 1911", "Century Gothic", AppleGothic, Arial, sans-serif;
+	font-size: 1.3em;
+	padding: 1%;
+}
+
+.s4-right ul {
+	list-style: square;
+	text-align: left;
+}
+
+.s7-right {
+	text-align: right;
+	font-family: "Goudy Bookletter 1911", "Century Gothic", AppleGothic, Arial, sans-serif;
+	font-size: 1.3em;
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+	padding: 2%;
+}
+
+.paragraph {
+	font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+}
+
+.list-table {
+	padding-bottom: 2%;
+	margin: auto;
+	display: table;
+	font-size: 1.1em;
+}
+
+.footer {
+	background-color: #555;
+	color: #eee;
+	border-top: 2% solid #eee;
+	margin: auto;
+	margin-top: 5%;
+}
+
+.preformat {
+	white-space: pre;
+	font-family: monospace;
+	font-size: .75em;
+}

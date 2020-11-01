@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+	<head>
+
+	    <meta charset = "utf-8">
+	    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+		<meta name = "author" content = "anon">
+
+	    <title>rekt.undo.it</title>
+
+	    <!-- cache fonts from google -->
+	    <link rel = "stylesheet" href = "http://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|VT323|Source+Code+Pro" />
+
+	    <!-- custom sheet loads last -->
+	    <link href = "default.css" rel = "stylesheet" />
+
+	</head>
+
+	<script type ="text/javascript">
+
+  		function divToggle(div) {
+  			if (div.style.display == 'block') {
+  				div.style.display = 'none';
+  			}
+  			else {
+  				div.style.display = 'block';
+  			}
+  		}
+
+  	</script>
+
+	<body class = "stambul">
+
+	    <div id = "main_body">
+
+	    	<div class = "main_header">
+
+				<div class = "mast">
+					<div class = "mast_h1">rekt.undo.it</div>
+					<div class = "mast_h2"><a href="index.shtml">news</a></div>
+					<div class = "mast_h2">
+						<a href = "#" onclick = "divToggle(screenfetch); return false">screenfetch</a>
+					</div>
+					<div class = "mast_h2"><a href="resources.shtml">resources</a></div>
+					<div class = "mast_h2"><a href="fib.shtml">fibonacci</a></div>
+					<div class = "mast_h2"><a href="jnug_reversion.txt">jnug reversion</a></div>
+					<div class = "mast_h2"><a href="902.shtml">902</a></div>
+				</div>
+
+			</div>
+
+			<div id = "screenfetch"><!--#include virtual = "/screenfetch.txt"> --></div>
+
+			<div class = "a_plus_main">
+
+				<div class = "a_plus_block_close" style = "margin: 1%; cursor: auto;">click topic to open/close.</div>
+
+				<div class = "a_plus_h1" onclick = "divToggle(one_one);">1.1 - Basic Input Output System</div>
+
+				<div id = "one_one">
+
+					<div class = "a_plus_block"><strong>BIOS</strong> - <span><strong>B</strong>asic <strong>I</strong>nput <strong>O</strong>utput <strong>S</strong>ystem</span> (firmware, ROM, flash memory, etc).
+						<ul>
+							<li>- first initializes system (CPU and memory) - <span>POST (<strong>P</strong>ower <strong>O</strong>n <strong>S</strong>elf <strong>T</strong>est)</span>.</li>
+							<li>- then looks for and hands off to boot loader.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter"><strong>UEFI</strong> - <span><strong>U</strong>nified <strong>E</strong>xtensible <strong>F</strong>irmware <strong>I</strong>nterface</span>. Modern type of BIOS found today.
+						<ul>
+							<li>- can boot from larger storage systems (GUID/GPT disks, also supports FAT and removable media).</li>
+							<li>- includes pre-boot environment - not an OS but can have shell, drivers, applications; able to browse web, backup drives, remote diagnostics, etc.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block">non-volatile BIOS memory stores BIOS configuration (your settings).
+						<ul>
+							<li>- used to be stored on complementary metal-oxide semiconductor, CMOS - backed up with battery (always had to have power source to keep memory stored). bad battery required CMOS configuration on every boot (and may have also required system time to be set). could reset to factory defaults by just removing battery.</li>
+							<li>- more recently has moved to predominantly flash memory which is more easily stored and accessed.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter"><strong>secret button</strong> - key combination to interrupt normal boot and enter BIOS.</div>
+
+					<div class = "a_plus_block"><strong>virtualization</strong> - can be used to make changes to 'fake' BIOS instance instead of BIOS currently running system.
+						<ul>
+							<li>- Microsoft Virtual PC (Windows 7), Hyper-V (Windows 8).</li>
+							<li>- VMware Workstation Player.</li>
+							<li>- NOT Virtualbox - DOES NOT include any BIOS configuration settings.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter">config tips.
+						<ul>
+							<li>- have a backup. make notes, <span>take a picture</span>.</li>
+							<li>- don't make any change unless you're CERTAIN of the setting.</li>
+							<li>- backup. Backup. BACKUP.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block">BIOS security.
+						<ul>
+							<li>- BIOS password - system won't ever load without password being provided.</li>
+							<li>- supervisor password - restricts access to BIOS.</li>
+							<li>- full disk encryption - EVERYTHING is encrypted, not just individual files. Windows BitLocker: integrates BIOS with TPM (<span><strong>T</strong>rusted <strong>P</strong>latform <strong>M</strong>odule</span>). TPM adds advanced cryptographic functions and is built in to some systems; can be added with expansion slot/card.</li>
+							<li>- <span>LoJack for Laptops/CompuTrace</span> - software built in to laptop BIOS. rootkit - reinstalls self, automatically installs in new drives. phones home with location info. theft mode - remotely lock laptop or delete files, force startup password.</li>
+							<li>- <span>Secure Boot</span> - part of UEFI specification, digitally signs known-good software. prevents malicious software from "owning" system ... no non-signed software will run.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter">BIOS upgrades.
+						<ul>
+							<li>- <span>firmware</span> - non-volatile memory, ROM, flash - each component or device may have own firmware.</li>
+							<li>- not part of normal maintenance cycle - only updated for specific reason.</li>
+							<li>- get current BIOS version - <span>windows + r > msinfo32</span> > 'System Summary' tab > 'BIOS Version/Date' field.</li>
+							<li>- <span>read documentation</span>.</li>
+							<li>- <span>plug into reliable power source</span>/have full battery. UPS to be safe.</li>
+							<li>- some newer mobos can switch between two BIOS versions - two separate BIOS chips. safety feature, if main BIOS corrupts, can switch to backup.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_close" onclick = "divToggle(one_one);">click to close.</div>
+				</div>
+
+				<div class = "a_plus_h1" onclick = "divToggle(one_two);">1.2 - Motherboards</div>
+
+				<div id = "one_two">
+
+					<div class = "a_plus_block"><strong>motherboard</strong> - main system board. number of different form factors. considerations: <span>physical size, basic layout, power, airflow</span>.
+						<ul>
+							<li>form factors:</li>
+							<li>- <span>ATX</span> - Standard-ATX, Micro-ATX (uATX).</li>
+							<li>- <span>ITX</span> - Mini-ITX, Nano-ITX, Pico-ITX, Mobile-ITX.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block"><strong>ATX</strong> - <span><strong>A</strong>dvanced <strong>T</strong>echnology E<strong>x</strong>tended</span>. standardized by Intel in 1995.
+						<ul>
+							<li>- power: two connector types: 20 pin, 24 pin (most common). may also have additional 4 or 8 pin connector.</li>
+							<li>- ports: optional i/o backplate.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block"><strong>microATX</strong> (uATX) - smaller than ATX.
+						<ul>
+							<li>- limited expansion slots.</li>
+							<li>- backwards compatibility: can fit in ATX case, similar mounting points, similar power.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block"><strong>miniITX</strong> (ITX) - <span><strong>I</strong>nformation <strong>T</strong>echnology E<strong>x</strong>tended</span>. developed by VIA in 2001.
+						<ul>
+							<li>- screw-compatible with ATX/microATX - fits almost any enclosure.</li>
+							<li>- small form factor lends well to single-purpose computing (i.e. streaming media).</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter"><strong>bus architecture</strong> - communication paths (analogy: city of technology).
+						<ul>
+							<li><span>width</span> (old) / <span>bandwidth</span> (new) of expansion bus: in bits, how much traffic we can push through connection.</li>
+							<li><span>clock speed</span> of bus: how fast bus is going; each bus gets own clock.</li>
+							<li>- measure of cycles per second: a <strong>hertz</strong>.</li>
+							<li>- 1MHz is a <span>megahertz</span> which is one million cycles per second.</li>
+							<li>- 1GHz is a <span>gigahertz</span> which is one thousand megahertz (1000MHz).</li>
+							<li><span>clock speed not necessarily equal to transfer rate</span>.</li>
+							<li><strong>Northbridge</strong> - memory controller hub, <strong>Southbridge</strong> - i/o controller hub.</li>
+							<li><span>parallel PCI bus mode</span> - for a single transfer all of the bits are transferred at one single time (i.e. 32-bit bus b/w southbridge & PCI slot = 32 separate connections all sending at same time).</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block"><strong>expansion slots</strong>.
+						<ul>
+							<li class = "divider"><span><strong>PCI</strong></span>, conventional PCI (legacy) - <span><strong>P</strong>eripheral <strong>C</strong>omponent <strong>I</strong>nterconnect</span>. created in 1994.</li>
+							<li>- common expansion interface. 32- and 64-bit bus width. parallel mode communication.</li>
+							<li>- throughput varies by bus version: 133MB/s (32-bit at 33MHz), 266MB/s (32-bit at 66MHz or 64-bit at 33MHz), 533MB/s (64-bit at 66MHz).</li>
+							<li>- notches on PCI card designate certain power requirement (i.e. 32-bit card w/ 3.3V and 5V notches; 64-bit card w/ 3.3V, 5V, 64-bit notches).</li>
+
+							<li class = "divider"><span><strong>PCI-X</strong></span>, PCI eXtended - based on conventional PCI and designed for servers.</li>
+							<li>- higher bandwidth (4x clockspeed, built to handle higher-speed network and storage, 1064MB/s throughput) but still parallel communication.</li>
+
+							<li class = "divider"><span><strong>PCI Express</strong></span>, PCIe - replaced PCI, PCI-X, AGP (<span><strong>A</strong>ccelerated <strong>G</strong>aphics <strong>P</strong>ort</span>).</li>
+							<li>- <span>serial</span> communication - unidirectional serial lanes, sending a single bit at a time from one side to the other.</li>
+							<li>- x1, x2, x4, x8, x16, x32 <span>full duplex lanes</span> ('x' is pronounced 'by' - 'by 4', 'by 32').</li>
+							<li>- <span>full duplex</span> communication - back and forth in both directions simultaneously.</li>
+							<li>- different versions of PICe - v1.x: 250MB/s, v2.x: 500MB/s, v3.0: ~1GB/s, v4.0: ~2GB/s.</li>
+
+							<li class = "divider"><span><strong>PCI Express Mini</strong></span> (for laptops) and <span><strong>Mini PCI</strong></span> - shrunk down for mobile use.</li>
+							<li>- wifi adapter, mobile broadband, etc.</li>
+							<li>- no easy access to card: it's inside the laptop.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter"><strong>RAM slots</strong> - all about <span>speed, speed, speed</span>. each motherboard different in configuration/type of memory it accepts.
+						<ul>
+							<li class = "divider"><span><strong>DIMM</strong></span>, <span><strong>D</strong>ual <strong>I</strong>nline <strong>M</strong>emory <strong>M</strong>odule</span>.</li>
+							<li>- electrical contacts differ on each side: each side is a different set of contacts to the memory.</li>
+							<li>- 64-bit data width (bus).</li>
+							<li>types - <span>DDR SDRAM</span> - 184 pins, <span>DDR2</span> & <span>DDR3 SDRAM</span> - 240 pins.</li>
+
+							<li class = "divider"><span><strong>SO-DIMM</strong></span>, <span><strong>S</strong>mall <strong>O</strong>utline <strong>D</strong>ual <strong>I</strong>nline <strong>M</strong>emory <strong>M</strong>odule</span>. smaller form factor for laptop mobility. <span>68x32mm</span>.</li>
+							<li>- notches designate type of memory.</li>
+							<li>types - <span>DDR</span> & <span>DDR2 SDRAM</span> - 200 pins, <span>DDR3 SDRAM</span> - 204 pins.</li>
+
+							<li class = "divider"><span><strong>Micro-DIMM</strong></span> for even smaller form factor (mobile devices). <span>54x30mm</span>.</li>
+							<li>- higher memory density.</li>
+							<li>types - <span>DDR SDRAM</span> - 172 pins, <span>DDR2</span> & <span>DDR3 SDRAM</span> - 214 pins.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block"><strong>CPU sockets</strong> - motherboards matched with CPUs. CPUs have specific <span>socket</span> requirements.
+						<ul>
+							<li>- usually largest component on board, and central to everything else.</li>
+							<li>- not easily upgradeable and not usually normal upgrade path.</li>
+
+							<li class = "divider"><span><strong>ZIF</strong></span> socket, <span><strong>Z</strong>ero <strong>I</strong>nsertion <strong>F</strong>orce</span>.</li>
+							<li>- pins on chip.</li>
+							<li>- place chip on socket with pins aligned, arms secure and hold in place.</li>
+
+							<li class = "divider"><span><strong>LGA</strong></span> socket, <span><strong>L</strong>and <strong>G</strong>rid <strong>A</strong>rray</span>.</li>
+							<li>- pins on mobo, easier to damage (careful not to drop anything on socket).</li>
+							<li>- place chip on socket with pins aligned, arms secure and hold in place.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter"><strong>mobo chipsets</strong>.
+						<ul>
+							<li class = "divider"><span><strong>Northbridge</strong></span>, memory controller hub.</li>
+							<li>- connects CPU to memory and high-speed graphics card. <span>high bandwidth communication.</span></li>
+							<li>- modern architecture includes cooling options such as heatsink and fans.</li>
+
+							<li class = "divider"><span><strong>Southbridge</strong></span>, i/o controller hub.</li>
+							<li>- manages connections: PCI interface, peripherals (USB, ethernet, IDE, etc), onboard graphics, BIOS. basically <span>anything not on northbridge</span>.</li>
+
+							<li class = "divider"><strong>chipset evolution</strong> - smaller and smaller, consolidating, all in the name of speed.</li>
+							<li>- modern processors (like Ivybridge) move functions onboard the actual CPU die: processor cores, memory controller, GPU.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block"><strong>mobo jumpers and connectors</strong>.
+						<ul>
+							<li>- most case features will connect to jumpers (fans, lights, etc): provided power and controlled by mobo.</li>
+							<li>- other jumpers are for configuration (enable/disable port, set bus speed, reset BIOS, etc).</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_close" onclick = "divToggle(one_two);">click to close.</div>
+				</div>
+
+				<div class = "a_plus_h1" onclick = "divToggle(one_three);">1.3 - Memory</div>
+
+				<div id = "one_three">
+
+					<div class = "a_plus_block"><strong>memory types</strong>.
+						<ul>
+							<li class = "divider"><strong>RAM</strong>, <span><strong>R</strong>andom <strong>A</strong>ccess <strong>M</strong>emory</span>. most common but not only type of memory.</li>
+							<li>- data and programs can only be used when moved into RAM.</li>
+
+							<li class = "divider"><strong>ROM</strong>, <span><strong>R</strong>ead <strong>O</strong>nly <strong>M</strong>emory</span>. static: can't be changed or erased.</li>
+							<li>- good place for BIOS.</li>
+							<li>- <strong>PROM</strong>, <span><strong>P</strong>rogrammable <strong>R</strong>ead <strong>O</strong>nly <strong>M</strong>emory</span>. initially programmable at initialization but immutable.</li>
+							<li>- <strong>EPROM</strong>, <span><strong>E</strong>rasable <strong>P</strong>rogrammable <strong>R</strong>ead <strong>O</strong>nly <strong>M</strong>emory</span>. write / erase / write again.</li>
+							<li>- <strong>EEPROM</strong>, <span><strong>E</strong>lectrically <strong>E</strong>rasable <strong>P</strong>rogrammable <strong>R</strong>ead <strong>O</strong>nly <strong>M</strong>emory</span>. flash memory and SSD.</li>
+
+							<li class = "divider"><strong>SRAM</strong>, <span><strong>S</strong>tatic RAM</span>. very fast and very expensive.</li>
+							<li>- physically much larger.</li>
+							<li>- <span>processor caches</span>: L1, L2, L3.</li>
+
+							<li class = "divider"><strong>DRAM</strong>, <span><strong>D</strong>ynamic <strong>R</strong>andom <strong>A</strong>ccess <strong>M</strong>emory</span>. what we usually mean when talking about RAM.</li>
+							<li>- dynamic: needs constant refreshing. without refreshing, data in memory disappears.</li>
+							<li>- random access: any storage location can be directly accessed (unlike magnetic tape).</li>
+
+							<li class = "divider"><strong>SDR SDRAM</strong>, <span><strong>S</strong>ingle <strong>D</strong>ata <strong>R</strong>ate <strong>S</strong>ynchronous RAM</span>.</li>
+							<li>- 168 pins.</li>
+							<li>- synchronized to common system clock: queue up one process while waiting for another (classic DRAM didn't wait for clock signal).</li>
+							<li>- don't confuse SDRAM with SRAM.</li>
+							<li>- <span>one clock cycle equals one piece of data</span>.</li>
+						</ul>
+
+						<ul>
+							<li class = "divider"><strong>DDR SDRAM</strong>, <span><strong>D</strong>ouble <strong>D</strong>ata <strong>R</strong>ate <strong>S</strong>ynchronous RAM</span>. twice the data rate of SDR SDRAM, but same clock speed.</li>
+							<li>- 184 pins.</li>
+							<li>- naming convention: DDR-200 = 200 million transfers per second.</li>
+							<li>- <strong><span>formula: multiply by 8</span> to get throughput</strong> in megabytes per second (MB/s).</li>
+							<li>- 200 x 8 = 1600 = PC1600.</li>
+							<li>- double data rate: <span>one clock cycle equals two pieces of data</span> (one on rise and one on fall).</li>
+
+						
+							<li>
+								<table class = "table_901">
+									<tr class = "table_901_tr">
+										<th>memory clock speed</th><th>i/o bus clock speed</th><th>DDR speed</th><th>transfers/second</th><th>transfer rate</th><th>module name</th>
+									</tr>
+									<tr class = "table_901_tr">
+										<td>100 MHz</td><td>100 MHz</td><td>DDR-200</td><td>200 million</td><td>1600 MB/s</td><td>PC1600</td>
+									</tr>
+									<tr class = "table_901_tr_lighter">
+										<td>133 MHz</td><td>133 MHz</td><td>DDR-266</td><td>266 million</td><td>2133 MB/s</td><td>PC2100</td>
+									</tr>
+									<tr class = "table_901_tr">
+										<td>166 MHz</td><td>166 MHz</td><td>DDR-333</td><td>333 million</td><td>2667 MB/s</td><td>PC2700</td>
+									</tr>
+									<tr class = "table_901_tr_lighter">
+										<td>200 MHz</td><td>200 MHz</td><td>DDR-400</td><td>400 million</td><td>3200 MB/s</td><td>PC3200</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+
+						<ul>
+							<li class = "divider"><strong>DDR2 SDRAM</strong>, <span><strong>D</strong>ouble <strong>D</strong>ata <strong>R</strong>ate <strong>2</strong> <strong>S</strong>ynchronous RAM</span>. twice as fast as DDR.</li>
+							<li>- 240 pins.</li>
+							<li>- NOT backwards compatible: DDR2 won't work in DDR slot.</li>
+
+							<li>
+								<table class = "table_901">
+									<tr class = "table_901_tr">
+										<th>memory clock speed</th><th>i/o bus clock speed</th><th>DDR speed</th><th>transfers/second</th><th>transfer rate</th><th>module name</th>
+									</tr>
+									<tr class = "table_901_tr">
+										<td>100 MHz</td><td>200 MHz</td><td>DDR2-400</td><td>400 million</td><td>3200 MB/s</td><td>PC2-3200</td>
+									</tr>
+									<tr class = "table_901_tr_lighter">
+										<td>133 MHz</td><td>266 MHz</td><td>DDR2-533</td><td>533 million</td><td>4266 MB/s</td><td>PC2-4200</td>
+									</tr>
+									<tr class = "table_901_tr">
+										<td>166 MHz</td><td>333 MHz</td><td>DDR2-667</td><td>667 million</td><td>5333 MB/s</td><td>PC2-5300</td>
+									</tr>
+									<tr class = "table_901_tr_lighter">
+										<td>200 MHz</td><td>400 MHz</td><td>DDR2-800</td><td>800 million</td><td>6400 MB/s</td><td>PC2-6400</td>
+									</tr>
+									<tr class = "table_901_tr">
+										<td>266 MHz</td><td>533 MHz</td><td>DDR2-1066</td><td>1066 million</td><td>8533 MB/s</td><td>PC2-8500</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+
+						<ul>
+							<li class = "divider"><strong>DDR3 SDRAM</strong>, <span><strong>D</strong>ouble <strong>D</strong>ata <strong>R</strong>ate <strong>3</strong> <strong>S</strong>ynchronous RAM</span>. twice as fast as DDR2 (4x DDR).</li>
+							<li>- also 240 pins.</li>
+							<li>- larger chip capacities.</li>
+							<li>- NOT backwards compatible.</li>
+
+							<li>
+								<table class = "table_901">
+									<tr class = "table_901_tr">
+										<th>memory clock speed</th><th>i/o bus clock speed</th><th>DDR speed</th><th>transfers/second</th><th>transfer rate</th><th>module name</th>
+									</tr>
+									<tr class = "table_901_tr">
+										<td>100 MHz</td><td>400 MHz</td><td>DDR3-800</td><td>800 million</td><td>6400 MB/s</td><td>PC3-6400</td>
+									</tr>
+									<tr class = "table_901_tr_lighter">
+										<td>133 MHz</td><td>533 MHz</td><td>DDR3-1066</td><td>1.066 billion</td><td>8533 MB/s</td><td>PC3-8500</td>
+									</tr>
+									<tr class = "table_901_tr">
+										<td>167 MHz</td><td>667 MHz</td><td>DDR3-1333</td><td>1.333 billion</td><td>10677 MB/s</td><td>PC3-10600</td>
+									</tr>
+									<tr class = "table_901_tr_lighter">
+										<td>200 MHz</td><td>800 MHz</td><td>DDR3-1600</td><td>1.600 billion</td><td>12800 MB/s</td><td>PC3-12800</td>
+									</tr>
+									<tr class = "table_901_tr">
+										<td>233 MHz</td><td>933 MHz</td><td>DDR3-1866</td><td>1.866 billion</td><td>14933 MB/s</td><td>PC3-14900</td>
+									</tr>
+									<tr class = "table_901_tr_lighter">
+										<td>267 MHz</td><td>1067 MHz</td><td>DDR3-2133</td><td>2.133 billion</td><td>17066 MB/s</td><td>PC3-17000</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+
+					</div>
+
+					<div class = "a_plus_block_lighter"><strong>error checking</strong> - used on critical systems (any server: VM server, database, web, etc).
+						<ul>
+							<li class = "divider"><strong><span>parity</span></strong> memory.</li>
+							<li>- adds additional bit: <span>even parity</span> adds a bit to a full byte make an even number (if byte is even, nothing added).</li>
+							<li>- won't always detect errors.</li>
+							<li>- can't correct error.</li>
+
+							<li class = "divider"><strong>ECC</strong>, <span><strong>E</strong>rror <strong>C</strong>orrecting <strong>C</strong>ode</span> memory.</li>
+							<li>- detects errors and corrects on the fly.</li>
+							<li>- designed for enterprise systems.</li>
+							<li>- looks physically identical to non-ECC memory.</li>
+
+							<li class = "divider"><strong><span>registered</span></strong> memory.</li>
+							<li>- also called <span>buffered</span> memory.
+							<li>- includes additional register between RAM module and memory controller.</li>
+							<li>- used on high-end systems (servers); provides more stable operating environment.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block"><span><strong>multi-channel</strong></span> memory.
+						<ul>
+							<li>- installed in pairs or trios for higher throughput.</li>
+							<li>- memory combinations should match, <span>exact matches</span> are best.</li>
+							<li>- oftens module slots are color-coded (ex: matching modules in black, matching modules in red).</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter"><span><strong>single-sided</strong></span> vs <span><strong>double-sided</strong></span> memory.
+						<ul>
+							<li>- mobo will specify compatible memory types.</li>
+							<li>- not always the physical layout of memory package.</li>
+							<li>- 'sides' could refer to <span>ranks</span>: groups of memory on a module that can be independently accessed, with memory controller moving between the ranks.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_close" onclick = "divToggle(one_three);">click to close.</div>
+				</div>
+
+				<div class = "a_plus_h1" onclick = "divToggle(one_four);">1.4 - Expansion Cards</div>
+				
+				<div id = "one_four">
+
+					<div class = "a_plus_block">
+						<ul>
+							<li>1. check documentation for number and type of slots.</li>
+							<li>2. check requirements for type of card/adapter (hardware/software min reqs), knowledge base, support forums.</li>
+							<li>3. check driver req - install driver/software first? device then driver?</li>
+							<li>4. check manufacturer website for newer version of driver. also may need to uninstall older version.</li>
+							<li>5. power off computer.</li>
+							<li>6. place card directly on top of slot.</li>
+							<li>7. press down gently - should EASILY slide into place - if not, check to make sure it is correct type of card for/compatible with slot.</li>
+							<li>8. check device manager for status.</li>
+					</div>
+
+					<div class = "a_plus_block"><strong>common types</strong>.
+						<ul>
+							<li class = "divider"><strong>audio</strong> card.</li>
+							<li>- for sending analog and/or digital audio signals.</li>
+							<li>- typically RCA & TRS jacks.</li>
+
+							<li class = "divider"><strong>video</strong> card.</li>
+							<li>- in modernity, mostly comprised of fans and heatsinks.</li>
+							<li>- underneath are very high-speed (and <strong>HOT</strong>) specialized processors.</li>
+							<li>- gaming systems and high-end video editing.</li>
+
+							<li class = "divider"><strong>network interface</strong> card.</li>
+							<li>- not all mobos have built-in networking, so expansion card can add that functionality.</li>
+							<li>- certain types provide multiple interfaces - particularly on <strong>servers</strong>. multiple networks into single device simultaneously.</li>
+
+							<li class = "divider"><strong>USB</strong>/<strong>Firwire</strong>/<strong>Thunderbolt</strong> adapter card.</li>
+							<li>- provides more ports.</li>
+
+							<li class = "divider"><strong>storage</strong> card.</li>
+							<li>- specifically designed to provide RAID services for all storage devices on computer.</li>
+
+							<li class = "divider"><strong>modem</strong> card.</li>
+							<li>- internet connectivity over phone line.</li>
+
+							<li class = "divider"><strong>wireless</strong>/<strong>cellular</strong>/<strong>WWAN</strong> adapter card.</li>
+							<li>- mobile service provider - <span>hotspot</span> on a card.</li>
+							<li>- usually in mobile devices (in laptops, Mini PCI or MiniPCI Express where antenna plugs in).</li>
+
+							<li class = "divider"><strong>television tuner</strong>/<strong>video capture</strong> card.</li>
+							<li>- receive signal over standard F-connector and save it digitally.</li>
+						
+							<li class = "divider"><strong>riser</strong> card.</li>
+							<li>- way to fit expansion card into small/slim computer.</li>
+							<li>- simply turns card sideways so not limited by height of server.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_close" onclick = "divToggle(one_four);">click to close.</div>
+				</div>
+
+				<div class = "a_plus_h1" onclick = "divToggle(one_five);">1.5 - Storage / RAID</div>
+				
+				<div id = "one_five">
+
+					<div class = "a_plus_block"><strong>common types</strong>.
+						<ul>
+							<li class = "divider"><span><strong>optical</strong></span> storage.</li>
+							<li>- small bumps read with laser beam. microscopic binary storage.</li>
+							<li>- <strong>CD-ROM</strong> (<span><strong>C</strong>ompact <strong>D</strong>isc</span> ROM) = <strong>700MB</strong> capacity.</li>
+							<li>- <strong>DVD-ROM</strong> (<span><strong>D</strong>igital <strong>V</strong>ersatile <strong>D</strong>isc</span> ROM) = <strong>4.7GB</strong> capacity for single-layer, <strong>8.5GB</strong> for <span>dual-layer</span>.</li>
+							<li>- <span><strong>Blu-ray</strong> Disc</span> = <strong>25GB</strong> capacity for single-layer, <strong>50GB</strong> for dual-layer.</li>
+							<li><strong>writing</strong> to optical media:</li>
+							<li>- "burning" doesn't create bumps but rather darkens photosensitive dye.</li>
+							<li>- types:</li>
+							<li><ul>
+								<li>- <span>CD-RW</span>, Compact Disc ReWritable.</li>
+								<li>- <span>DVD-R/RW</span>, DVD Read and Rewritable.</li>
+								<li>- <span>DVD-R DL</span>, DVD-R Dual Layer.</li>
+								<li>- <span>BD-R</span>, Blu-ray Disc Recordable.</li>
+								<li>- <span>BD-RE</span>, Blu-ray Disc Recordable Erasable.</li>
+							</ul></li>
+
+							<li class = "divider"><span><strong>hard disk</span> drive</strong> storage.</li>
+							<li>- spinning platters moving very quickly (thousands of rpm).</li>
+							<li>- generally, the faster it spins the lower the drive latency.</li>
+
+							<li class = "divider"><span><strong>SSD</strong></span>, <span><strong>S</strong>olid <strong>S</strong>tate</span> <strong>D</strong>rive storage.</li>
+							<li>- meant to solve shortcomings of HD (no moving parts to wear out/fail).</li>
+							<li>- effectively flash/EEPROM memory.</li>
+
+							<li class = "divider"><span><strong>hybrid</span> drive</strong> storage.</li>
+							<li>- both a spinning HD and SSD in a single device.</li>
+							<li>- SSD caches slower HD data. increases speed without the cost of SSD-only system.</li>
+							<li>looks like normal HD or SSD. same form factor.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter"><span><strong>hot swappable</span> drive</strong>: add and remove while system is running/hot.
+						<ul>
+							<li>add and remove while system is running/hot.</li>
+							<li>- USB, FireWire, SATA/eSATA (part of standard).</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block divider"><span><strong>USB flash</span> drive</strong>: flash memory.
+						<ul>
+							<li>- EEPROM.</li>
+							<li>- non-volatile memory.</li>
+							<li>- no power required to retain data.</li>
+							<li>- <strong>limited number of writes</strong>, but not reads.</li>
+							<li>- not designed for archival storage. easy to damage and lose.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter divider"><span><strong>tape</span> drive</strong>: magnetic tape.
+						<ul>
+							<li>- <strong>sequential</strong>. fast-forward, rewind.</li>
+							<li>- various sizes (gigs to terrabytes).</li>
+							<li>- inexpensive, easy to store and ship.</li>
+							<li>- <strong>LTO</strong>, <span><strong>L</strong>inear <strong>T</strong>ape-<strong>O</strong>pen</span>. the '<strong>ultrium</strong>' form factor.</li>
+							<li>- best for archival storage.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block divider"><strong>RAID</strong>, <span><strong>R</strong>edundant <strong>A</strong>rray of <strong>I</strong>independent <strong>D</strong>isks</span>. (also <strong>I</strong>nexpensive disks).
+						<ul>
+							<li>- different levels: some redundant, some not.</li>
+							<li class = "bufferUp">- software vs hardware raid:
+								<ul>
+									<li><span>software-based</span>:</li>
+									<li>- feature of OS.</li>
+									<li>- doesn't require special hardware.</li>
+									<li>- usually lower performance than hardware-based.</li>
+								</ul>
+								<ul>
+									<li><span>hardware-based</span>:</li>
+									<li>- feature of hard drive controller.</li>
+									<li>- configured outside of OS, usually invisible to OS.</li>
+									<li>- high performance designed for <strong>speed</strong>.</li>
+								</ul>
+							</li>
+							<li class = "divider">raid <span><strong>0</strong> - <strong>striping</strong></span>.</li>
+							<li>- <strong>striping</strong> - file blocks split between two or more physical drives.</li>
+							<li>- high performance, data written quickly.</li>
+							<li>- no redundancy: drive failure breaks the raid.</li>
+							<li>- <span>raid ZERO = ZERO redundancy</span>.</li>
+							<li class = "divider">raid <span><strong>1</strong> - <strong>mirroring</strong></span>.</li>
+							<li>- <strong>mirroring</strong> - file blocks duplicated between two or more physical drives.</li>
+							<li>- high disk utilization. required disk space is doubled.</li>
+							<li>- <span>high redundancy</span>. drive failue does not affect data availability.</li>
+							<li class = "divider">raid <span><strong>5</strong> - <strong>striping</strong> w/ <strong>parity</strong></span>.</li>
+							<li>- file blocks striped with <strong>parity</strong> - parity block on last disk holds some parity information.</li>
+							<li>- requires at least <strong>three</strong> disks.</li>
+							<li>- efficient use of disk space: files aren't duplicated, but some extra space is still used for parity.</li>
+							<li>- <span>high redunancy</span>. data is available after drive failure.</li>
+							<li>- parity calculation may affect performance.</li>
+							<li class = "divider">raid <span><strong>10</strong> - <strong>stripe</strong> of <strong>mirrors</strong></span>.</li>
+							<li>- <strong>nested</strong> raid, raid <strong>1+0</strong>.</li>
+							<li>- speed of striping with redundancy of mirroring: best of both worlds.</li>
+							<li>- requires at least <strong>four</strong> drives.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_close" onclick = "divToggle(one_five);">click to close.</div>
+				</div>
+
+				<div class = "a_plus_h1" onclick = "divToggle(one_six);">1.6 - CPUs</div>
+				
+				<div id = "one_six">
+
+					<div class = "a_plus_block"><strong>overview of socket types</strong>.
+						<ul>
+							<li><strong>LGA</strong>, <span><strong>L</strong>and <strong>G</strong>rid <strong>A</strong>array</span>. pins on mobo, chip is flat.</li>
+							<li><strong>PGA</strong>, <span><strong>P</strong>in <strong>G</strong>rid <strong>A</strong>array</span>. pins on chip.</li>
+							<li><strong>ZIF</strong>, <span><strong>Z</strong>ero <strong>I</strong>nsertion <strong>F</strong>orce</span>.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter divider"><strong>intel.</strong>
+
+						<table class = "table_901">
+							<tr class = "table_901_tr">
+								<th>socket</th><th>type</th><th>pins</th><th>release date</th><th>supported CPUs</th><th>supported RAM</th>
+							</tr>
+							<tr class = "table_901_tr">
+								<td>socket T</td><td>LGA</td><td>775</td><td>2004</td><td><div>Pentium 4</div><div>Core 2</div></td><td><div>DDR2</div><div>DDR3</div></td>
+							</tr>
+							<tr class = "table_901_tr_lightest">
+								<td>socket B</td><td>LGA</td><td>1366</td><td>2008</td><td>Core i7 (Nehalem)</td><td>DDR3 triple-channel</td>
+							</tr>
+							<tr class = "table_901_tr">
+								<td><div>socket H</div><div>socket H1</div></td><td>LGA</td><td>1156</td><td>2009</td><td>Core i3/5/7 (Nehalem)</td><td>DDR3 dual-channel</td>
+							</tr>
+							<tr class = "table_901_tr_lightest">
+								<td>socket H2</td><td>LGA</td><td>1155</td><td>2011</td><td><div>Sandy Bridge</div><div>Ivy Bridge</div></td><td>DDR3 dual-channel</td>
+							</tr>
+							<tr class = "table_901_tr">
+								<td>socket H3</td><td>LGA</td><td>1150</td><td>2013</td><td><div>Haswell</div><div>Broadwell</div></td><td>DDR3 dual-channel</td>
+							</tr>
+							<tr class = "table_901_tr_lightest">
+								<td>socket R</td><td>LGA</td><td>2011</td><td>2011</td><td><div>Sandy Bridge-E/EP</div><div>Ivy Bridge-E/EP</div><div>Haswell-E/EP</div></td><td><div>DDR3 quad-channel</div><div>DDR4 quad-channel</div></td>
+							</tr>
+						</table>
+
+						<ul>
+							<li class = "divider">intel <span><strong>LGA 775</strong></span>. also <strong>socket T</strong> from Tejas core.</li>
+							<li>- 775 pins, LGA package.</li>
+							<li>- 2004.</li>
+							<li>- P4, Core 2 Duo, Xeon, Celeron.</li>
+
+							<li class = "divider">intel <span><strong>LGA 1366</strong></span>. also <strong>socket B</strong>.</li>
+							<li>- 1336 pins, LGA package.</li>
+							<li>- replaced LGA 775.</li>
+							<li>- 2008.</li>
+							<li>- Core i7.</li>
+
+							<li class = "divider">intel <span><strong>LGA 1156</strong></span>. also <strong>socket H</strong> or <strong>H1</strong>.</li>
+							<li>- 1156 pins, LGA package.</li>
+							<li>- also replaced LGA 775.</li>
+							<li>- 2009.</li>
+							<li>- integrates Northbridge onto the chip.</li>
+
+							<li class = "divider">intel <span><strong>LGA 1155</strong></span>. also <strong>socket H2</strong>.</li>
+							<li>- 1155 pins, LGA package.</li>
+							<li>- replaced LGA 1156. not compatible but looks similar (one pin difference).</li>
+							<li>- 2011.</li>
+							<li>- supports Sandy Bridge and Ivy Bridge microprocessors.</li>
+
+							<li class = "divider">intel <span><strong>LGA 1150</strong></span>. also <strong>socket H3</strong>.</li>
+							<li>- 1150 pins, LGA package.</li>
+							<li>- replaced LGA 1155.</li>
+							<li>- 2013.</li>
+							<li>- Haswell and Broadwell microarchitecture.</li>
+
+							<li class = "divider">intel <span><strong>LGA 2011</strong></span>. also <strong>socket R</strong>.</li>
+							<li>- 2011 pins, LGA package.</li>
+							<li>- replaced LGA 1366 and LGA 1567.</li>
+							<li>- 2011.</li>
+							<li>- high-end desktops and servers.</li>
+							<li>- Sandy Bridge-E/EP and Ivy Bridge-E/EP (Enthusiast and Xeon Class).</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block divider"><strong>amd.</strong>
+
+						<table class = "table_901">
+							<tr class = "table_901_tr">
+								<th>socket</th><th>type</th><th>pins</th><th>release date</th><th>supported CPUs</th><th>supported RAM</th>
+							</tr>
+							<tr class = "table_901_tr">
+								<td>AM3</td><td>PGA</td><td>941</td><td>2009</td><td><div>Athlon II</div><div>Phenom II</div></td><td><div>DDR2 dual-channel</div><div>DDR3 dual-channel</div></td>
+							</tr>
+							<tr class = "table_901_tr_lightest">
+								<td>AM3+</td><td>PGA</td><td>942</td><td>2011</td><td><div>Athlon II</div><div>Phenom II</div></td><td>DDR3 dual-channel</td>
+							</tr>
+							<tr class = "table_901_tr">
+								<td>FM1</td><td>PGA</td><td>905</td><td>2011</td><td>AMD 10h</td><td>DDR3 dual-channel</td>
+							</tr>
+							<tr class = "table_901_tr_lightest">
+								<td>FM2</td><td>PGA</td><td>904</td><td>2012</td><td>Piledriver</td><td>DDR3 dual-channel</td>
+							</tr>
+							<tr class = "table_901_tr">
+								<td>FM2+</td><td>PGA</td><td>906</td><td>2014</td><td>Steamroller</td><td>DDR3 dual-channel</td>
+							</tr>
+						</table>
+
+						<ul>
+							<li class = "divider">amd socket <span><strong>AM3</strong></span>.</li>
+							<li>- 941 pins, PGA-ZIF package.</li>
+							<li>- replaced AM2/AM2+.</li>
+							<li>- 2009.</li>
+							<li>- could be used in socket AM2/AM2+ with BIOS update.</li>
+
+							<li class = "divider">amd socket <span><strong>AM3+</strong></span>.</li>
+							<li>- 942 pins, PGA-ZIF package (one more pin than AM3).</li>
+							<li>- 2011.</li>
+							<li>- old AM3 processor could be used in AM3+ socket (but no AM3+ processor in AM3 socket).</li>
+
+							<li class = "divider">amd socket <span><strong>FM1</strong></span>.</li>
+							<li>- 905 pins, PGA-ZIF package.</li>
+							<li>- 2011.</li>
+							<li>- "AMD 10h" CPU architecture.</li>
+							<li>- AMD A-series processors: faster speed, DDR3 support, integrated PICe 2.0 controller.</li>
+
+							<li class = "divider">amd socket <span><strong>FM2</strong></span>.</li>
+							<li>- 904 pins, PGA-ZIF package (one pin less than FM1).</li>
+							<li>- 2012.</li>
+							<li>- "Piledriver" CPU architecture.</li>
+
+							<li class = "divider">amd socket <span><strong>FM2+</strong></span>. also <strong>Socket FDM2b</strong>.</li>
+							<li>- 906 pins, micro PGA-ZIF package (two more pins than FM2).</li>
+							<li>- 2014.</li>
+							<li>- "Steamroller" CPU architecture.</li>
+							<li>- FM2+ CPU not compatible with FM2 mobo, different pin configuration.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter divider"><strong>processor <span>speed</span></strong>.
+						<ul>
+							<li class = "divider">real speed: CPU <span>clock</span>.</li>
+							<li>- historical qualification of speed.</li>
+							<li>- megahertz (<span>MHz</span>) or gigahertz (<span>GHz</span>).</li>
+							<li class = "divider">actual speed: combination of factors.</li>
+							<li>- clock speed, CPU architecture, bus speed, bus widtch, L1 cache size, L2 cache size, OS, etc.</li>
+							<li class = "divider">- CPU manufacturers have moved away from marketing by clock cycles.</li>
+							<li>- no broadly accepted measure of performance.</li>
+							<li>- use a benchmark that works for you.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block divider"><strong>processor <span>cores</span></strong>.
+						<ul>
+							<li>dual-core, quad-core, octa-core, multi-core...</li>
+							<li>- and more all the time.</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter divider"><strong>CPU <span>die</span></strong>.
+						<div><img src = "img/901/cpu_die.png"></div>
+					</div>
+
+					<div class = "a_plus_block divider"><strong>CPU <span>cache</span></strong>.
+						<ul>
+							<li><strong>super fast memory</strong>.</li>
+							<li>- not much of it; holds data, instructions, and/or results.</li>
+							<li class = "divider"><strong>L1</strong> cache:</li>
+							<li>- first check.</li>
+							<li class = "divider"><strong>L2</strong> cache:</li>
+							<li>- secondary data.</li>
+							<li class = "divider"><strong>L3</strong> cache:</li>
+							<li>- shared, still on the chip (not in a core).</li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_lighter divider"><strong><span>hyper-threading</span></strong>.
+						<ul>
+							<li><span>HTT</span>, <strong>H</strong>yper-<strong>T</strong>hreading <strong>T</strong>echnology.</li>
+							<li class = "divider">one cpu but acts like two:</li>
+							<li>- doesn't actually work as fast as two; 15-30% performance improvement.</li>
+							<li class = "divider">OS must be written for HTT:</li>
+							<li>- WinXP and later.</li>
+
+						</ul>
+					</div>
+
+					<div class = "a_plus_block divider"><strong><span>virtualization</span></strong>.
+						<ul>
+							<li>run multiple OS within a single hardware platform (run an OS within an OS).</li>
+							<li>- share physical hardware components.</li>
+							<li>- virtualization in <strong>software</strong> is limited: performance and hardware management challenges.</li>
+							<li>- virtualization in <strong>hardware</strong> added to processors:</li>
+							<li><ul>
+								<li>- <span>Intel Virtualization Technology</span> (<strong><span>VT</span></strong>).</li>
+								<li>- <span>AMD Virtualization</span> (<strong><span>AMD-V</span></strong>).</li>
+							</ul></li>
+						</ul>
+					</div>
+
+					<div class = "a_plus_block_close" onclick = "divToggle(one_six);">click to close.</div>
+				</div>
+			
+			</div>
+
+			<div class="main_footer">
+	    		<div class="in_footer_left">Dynamic DNS provided by <a href="http://freedns.afraid.org/">Free DNS</a>. rekt.undo.it<!--#echo var="DOCUMENT_URI" -->, served <!--#echo var="DATE_LOCAL"-->.</div>
+	    		<div class="in_footer_right">plsnosteal.</div>
+	    	</div>
+		
+		</div>
+
+	</body>
+  
+</html>

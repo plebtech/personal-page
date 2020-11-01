@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="en" />
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="Nick McGlawn" />
+
+	<title>compTIA network+ study aides</title>
+
+	<!-- bootstrap -->
+	<link href="../css/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- cache fonts from google -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Yanone+Kaffeesatz|Goudy+Bookletter+1911" />
+
+	<!-- custom sheet loads last -->
+	<link href="../custom.css" rel="stylesheet" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<div class="container">
+
+		<div class="row">
+			<h1>compTIA network+ study aides</h1>
+		</div>
+
+		<!--
+		--------------------
+		--------------------
+		OSI model
+		--------------------
+		--------------------
+		-->
+
+		<div class="row lolite" id="osi_model"><h2>OSI model</h2></div>
+
+		<div class="row no2lite">
+			<div class="col-xs-3 s4-left"><img src="osi_layer7_UI.png" /></div>
+			<div class="col-xs-2 s4-mid"><div class="row"><h3>layer 7</h3></div><div class="row"><h3>application</h3></div></div>
+			<div class="col-xs-7 s4-right">
+				<ul>
+					<li>the <strong>user interface</strong> responsible for displaying received information to the user</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row nolite">
+			<div class="col-xs-3 s4-left"></div>
+			<div class="col-xs-2 s4-mid"><div class="row"><h3>layer 6</h3></div><div class="row"><h3>presentation</h3></div></div>
+			<div class="col-xs-7 s4-right">
+				<ul>
+					<li><strong>data translator</strong> or <strong>syntax</strong> layer</li>
+					<li>delivery and formatting of information to the application layer</li>
+					<li><strong>MIME</strong>, XDR</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row no2lite">
+			<div class="col-xs-3 s4-left"></div>
+			<div class="col-xs-2 s4-mid"><div class="row"><h3>layer 5</h3></div><div class="row"><h3>session</h3></div></div>
+			<div class="col-xs-7 s4-right">
+				<ul>
+					<li><strong>protocol</strong> mechanisms for opening, closing and managing sessions between processes</li>
+					<li><strong>SOCKS</strong>, <strong>NetBIOS</strong>, etc</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row nolite">
+			<div class="col-xs-3 s4-left"><img src="osi_layer4_firewall.jpg" /></div>
+			<div class="col-xs-2 s4-mid"><div class="row"><h3>layer 4</h3></div><div class="row"><h3>transport</h3></div></div>
+			<div class="col-xs-7 s4-right">
+				<ul>
+					<li><strong>firewall</strong> - port filtering - <strong>TCP/UDP</strong></li>
+					<li>some firewalls can filter through layer 7</li>
+					<li>can <strong>encrypt</strong> traffic I/O, and <strong>proxy</strong> traffic</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row no2lite" style="background-color: #ddd; border: none; border-left: 5px dashed #ccc; border-right: 5px dashed #ccc;">
+			<div class="col-xs-3 s4-left"></div>
+			<div class="col-xs-2 s4-mid"><div class="row"><h3>overlap</h3></div></div>
+			<div class="col-xs-7 s4-right">
+				<ul>
+					<li>most <strong>firewalls</strong> can also be <strong>routers</strong></li>
+					<li>sits on ingress/egress of network</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row nolite">
+			<div class="col-xs-3 s4-left"><img src="osi_layer3_router.jpg" /></div>
+			<div class="col-xs-2 s4-mid"><div class="row"><h3>layer 3</h3></div><div class="row"><h3>network</h3></div></div>
+			<div class="col-xs-7 s4-right">
+				<ul>
+					<li><strong>router</strong> - routes traffic between <strong>IP subnets</strong></li>
+					<li>routers inside of switches sometimes called <strong>layer 3 switches</strong></li>
+					<li>often connects different network types - LAN, WAN, copper, fiber</li>
+					<li><strong>WAP (wireless access point) is <em>not</em> a wireless router; it is a layer 3 router (wired interface) and a layer 2 bridge (wireless interface)</strong></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row no2lite" style="background-color: #ddd; border: none; border-left: 5px dashed #ccc; border-right: 5px dashed #ccc;">
+			<div class="col-xs-3 s4-left"></div>
+			<div class="col-xs-2 s4-mid"><div class="row"><h3>overlap</h3></div></div>
+			<div class="col-xs-7 s4-right">
+				<ul>
+					<li><strong>multilayer switch</strong> that includes <strong>routing</strong> functionality</li>
+					<li>layer 3: router</li>
+					<li>layer 2: switch</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row nolite" style="border-top: none;">
+			<div class="col-xs-3 s4-left"><img src="osi_layer2_switch.jpg" /></div>
+			<div class="col-xs-2 s4-mid"><div class="row"><h3>layer 2</h3></div><div class="row"><h3>data link</h3></div></div>
+			<div class="col-xs-7 s4-right">
+				<ul>
+					<li><strong>switch</strong> - <strong>ASIC</strong> (application specific integrated circuit) w/ bridging done in hardware</li>
+					<li>forwards traffic based on <strong>data link address</strong></li>
+					<li>many ports and features, including PoE (power over ethernet)</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row no2lite">
+			<div class="col-xs-3 s4-left"><img src="osi_layer1_repeater.jpg" /></div>
+			<div class="col-xs-2 s4-mid"><div class="row"><h3>layer 1</h3></div><div class="row"><h3>physical</h3></div></div>
+			<div class="col-xs-7 s4-right">
+				<ul>
+					<li><strong>hub/repeater</strong> - traffic enters one port, repeated to every other port</li>
+					<li><strong>half-duplex</strong>: can either send or receive, but not both at same time</li>
+					<li>less efficient as speed increase - two flavors are 10megabit / 100megabit</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--
+		--------------------
+		--------------------
+		network intrusion
+		--------------------
+		--------------------
+		-->
+
+		<div class="row lolite" id="network_intrusion"  style="margin-top: 10%;"><h2>network intrusion</h2></div>
+
+		<div class="row no2lite">
+			<div class="col-xs-3 s4-mid"><div class="row"><h3>NIDS vs NIPS</h3></div></div>
+			<div class="col-xs-9 s4-right">
+				<ul>
+					<li><strong>intrusions</strong>- exploits against OS, application, etc -- ex. buffer overflows, cross-site scripting</li>
+					<li><strong>NIDS</strong> - network-based intrusion <em>detection</em> system<br />can see intrusion but not prevent</li>
+					<li><strong>NIPS</strong> - network-based <em>prevention</em> system<br />can detect as well as stop the intrusion</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row nolite">
+			<div class="col-xs-3 s4-mid"><div class="row"><h3>identification technologies</h3></div></div>
+			<div class="col-xs-9 s4-right">
+				<ul>
+					<li><strong>signature-based</strong>- looks for a specific type of data -- aperfect match in the traffic</li>
+					<li><strong>anomaly-based</strong> - establishes a baseline, then identify a deviation</li>
+					<li><strong>behavior-based</strong> - observe and report</li>
+					<li><strong>heuristics</strong> - artificial intelligence used to identify - not a particular signature but smart targeting tech</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row no2lite">
+			<div class="col-xs-3 s4-mid"><div class="row"><h3>IDS implementations</h3></div></div>
+			<div class="col-xs-9 s4-right">
+				<ul>
+					<li><strong>software</strong> - ex. <a href="http://www.snort.org">snort</a>, load it and go -- liveCDs as well</li>
+					<li><strong>hardware</strong> - specialized high-speed w/ enterprise features -- high availability, external logging</li>
+					<li><strong>host-based</strong> - started as separate app, now integrated into many "endpoint" products (anti-virus, anti-spyware, etc) -- generally signature-based<br />but can also function based on behavior (identifying user behavior)</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--
+		--------------------
+		--------------------
+		content filtering
+		--------------------
+		--------------------
+		-->
+
+		<div class="row lolite" id="content_filtering"  style="margin-top: 10%;"><h2>content filtering</h2></div>
+
+		<div class="row no2lite">
+			<div class="span12 s4-right">
+				<ul class="list-table">
+					<li>control traffic based on data within content</li>
+					<li>data in the <strong>packets</strong> -- specifically in the <strong>application</strong> section of the packet</li>
+					<li>ex: corporate control of sensitive materials through outbound and inbound data</li>
+					<li>ex: control of inappropriate content (NSFW, parental controls)</li>
+					<li>protection against "evil" -- anti-virus, anti-malware</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row nolite">
+			<div class="col-xs-3 s4-mid"><div class="row"><h3>email filtering</h3></div></div>
+			<div class="col-xs-9 s4-right">
+				<ul>
+					<li>examines inbound and outbound email traffic</li>
+					<li>most common is spam filter</li>
+					<li>control of phishing attempts</li>
+					<li>anti-virus -- scan and block bad attachments</li>
+				</ul>
+			</div>
+		</div>
+
+				<div class="row no2lite">
+			<div class="col-xs-3 s4-mid"><div class="row"><h3>url filtering</h3></div></div>
+			<div class="col-xs-9 s4-right">
+				<ul>
+					<li>allow or restrict based on URL (or URI -- uniform resource identifier)</li>
+					<li>commonly allow list / block list</li>
+					<li>managed by category -- auction, hacking, malware, travel, recreation, etc</li>
+					<li>downside: often unable to identify through encryption (advanced SSL encryption for instance)</li>
+					<li>some newer filters can decrypt SSL</li>
+				</ul>
+			</div>
+		</div>
+
+				<!--
+		--------------------
+		--------------------
+		footer
+		--------------------
+		--------------------
+		-->
+
+		<div class="row footer">
+			<div class="span6 s3-left"><a href="http://www.bynickmc.com">bynickmc.com</a></div>
+			<div class="span6 s3-left"><a href="../career_resources/career_resources.html">career resources</a></div>
+			<div class="span6 s3-left"><a href="../to_do/to_do.html">to-do list</a></div>
+		</div>
+
+	</div>
+
+</body>
+  
+</html>

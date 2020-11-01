@@ -1,0 +1,288 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+/* Written by Nick McGlawn, copyright 2016.
+ * nick@{removethis}bynickmc.com
+ * Feel free to use any portion of this code so long as proper attributive credit is provided.
+ * In other words, don't pass my work off as your own. */
+
+/* The main purpose of this application is to implement and compare iterative and recursive approaches.
+ * The Fibonacci Sequence is used as it provides excellent illustration of the differences.
+ * The algorithms were originally formulated in Java.
+ * Ported to C# so that deeper elements could be generated using the 128-bit decimal data type. */
+
+namespace Fibonacci_Sequence
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        // variable declaration to hold the first element of the sequence.
+        decimal first;
+
+        // method sets the value of the first element declared above,
+        // based on radio button selection in UI.
+        private void SetFirst()
+        {
+            if (zeroRadioButton.Checked == true)
+            {
+                first = 0;
+            }
+            else if (oneRadioButton.Checked == true)
+            {
+                first = 1;
+            }
+        }
+
+        // method retrieves the user input for the nth element (to which we generate),
+        // inclusive of null, invalid and negative input-checking.
+        private decimal GetInput()
+        {
+            decimal input;
+            int tempInput;
+            // check for null or invalid input.
+            if (int.TryParse(inputTextBox.Text, out tempInput) == false)
+            {
+                input = 5;
+                outputListBox.Items.Add("INVALID INPUT.");
+                outputListBox.Items.Add("The program requires a positive integer value for the last element.");
+                outputListBox.Items.Add("Generating to the fifth element by default.");
+                outputListBox.Items.Add("");
+            }
+            // check for negative input.
+            else if ((int.TryParse(inputTextBox.Text, out tempInput) == true) && (tempInput < 0))
+            {
+                input = Math.Abs(tempInput);
+                outputListBox.Items.Add("INVALID INPUT.");
+                outputListBox.Items.Add("The program requires a positive integer value for the last element.");
+                outputListBox.Items.Add("Generating to the absolute value of the integer provided.");
+                outputListBox.Items.Add("");
+            }
+            else
+            {
+                input = (decimal)tempInput;
+            }
+            return input;
+        }
+
+        // recursive method for generating elements.
+        private decimal GiveRecurse(decimal nth)
+        {
+            // check for base elements: zero, one.
+            if (nth == 0 || nth == 1)
+            {
+                return nth;
+            }
+            else
+            {
+                try
+                {
+                    return GiveRecurse(nth - 1) + GiveRecurse(nth - 2);
+                }
+                // overflow catch.
+                // returns value (-1) which is not otherwise generated,
+                // which is then checked by the calling method (RecurseZero() or RecurseOne()).
+                catch
+                {
+                    return -1;
+                }
+            }
+        }
+
+        // iterative method for generating elements.
+        private decimal GiveIterate(decimal nth)
+        {
+            // check for base elements: zero, one.
+            if ((nth == 0) || (nth == 1))
+            {
+                return nth;
+            }
+            else
+            {
+                try
+                {
+                    decimal first = 0;
+                    decimal second = 1;
+                    decimal fibonacci = 0;
+                    int count = 2;
+                    while (count <= nth)
+                    {
+                        fibonacci = first + second;
+                        first = second;
+                        second = fibonacci;
+                        count++;
+                    }
+                    return second;
+                }
+                // catches overflow and returns value (-1) which is not otherwise generated,
+                // which is then checked by the calling method (IterateZero() or IterateOne()).
+                catch
+                {
+                    return -1;
+                }
+            }
+        }
+
+        /* while the method of printing to output is iterative,
+         * the output values are generated recursively.
+         * it can be observed readily at runtime, with a large nth value,
+         * that the lines are generated iteratively but appear blank until
+         * all recursion conludes.
+         * There may be a workaround available, but this serves as
+         * a secondary illustration of the inefficiency of recursion
+         * in such an application. */
+        private void RecurseZero(decimal input)
+        {
+            for (int i = 0; i <= input; i++)
+            {
+                // -1 is only passed in event of overflow.
+                if (GiveRecurse(i) == -1)
+                {
+                    outputListBox.Items.Add("Overflow error at element " + (i) + ". The element's value is too large to calculate.");
+                    outputListBox.TopIndex = outputListBox.Items.Count - 1;
+                    break;
+                }
+                else
+                {
+                    outputListBox.Items.Add("Sequence element " + (i) + " is " + GiveRecurse(i) + ".");
+                    outputListBox.TopIndex = outputListBox.Items.Count - 1;
+                }
+            }
+        }
+
+        private void RecurseOne(decimal input)
+        {
+            for (int i = 1; i <= input; i++)
+            {
+                // -1 is only passed in event of overflow.
+                if (GiveRecurse(i) == -1)
+                {
+                    outputListBox.Items.Add("Overflow error at element " + (i) + ". The element's value is too large to calculate.");
+                    outputListBox.TopIndex = outputListBox.Items.Count - 1;
+                    break;
+                }
+                else
+                {
+                    outputListBox.Items.Add("Sequence element " + (i) + " is " + GiveRecurse(i) + ".");
+                    outputListBox.TopIndex = outputListBox.Items.Count - 1;
+                }
+            }
+        }
+
+        private void IterateZero(decimal input)
+        {
+            for (int i = 0; i <= input; i++)
+            {
+                // -1 is only passed in event of overflow.
+                if (GiveIterate(i) == -1)
+                {
+                    outputListBox.Items.Add("Overflow error at element " + (i) + ". The element's value is too large to calculate.");
+                    outputListBox.TopIndex = outputListBox.Items.Count - 1;
+                    break;
+                }
+                else
+                {
+                    outputListBox.Items.Add("Sequence element " + (i) + " is " + GiveIterate(i) + ".");
+                    outputListBox.TopIndex = outputListBox.Items.Count - 1;
+                }
+            }
+        }
+
+        private void IterateOne(decimal input)
+        {
+            for (int i = 1; i <= input; i++)
+            {
+                if (GiveIterate(i) == -1)
+                {
+                    outputListBox.Items.Add("Overflow error at element " + (i) + ". The element's value is too large to calculate.");
+                    outputListBox.TopIndex = outputListBox.Items.Count - 1;
+                    break;
+                }
+                else
+                {
+                    outputListBox.Items.Add("Sequence element " + (i) + " is " + GiveIterate(i) + ".");
+                    outputListBox.TopIndex = outputListBox.Items.Count - 1;
+                }
+            }
+        }
+
+        private void ClearOutput()
+        {
+            inputTextBox.Text = "";
+            outputListBox.Items.Clear();
+        }
+
+        private void recurseButton_Click(object sender, EventArgs e)
+        {
+            outputListBox.Items.Clear(); 
+            decimal input = GetInput();
+            // give warning if attempting to recurse to a large nth value.
+            if (input > 25)
+            {
+                DialogResult dR = MessageBox.Show("You have specified that you wish to generate to an element greater than the 25th using the recursive method. The recursive method is inefficient for large numbers and will likely take longer than expected. This could also monopolize computer resources. If you are sure, click 'OK' to continue.", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                if (dR == DialogResult.OK)
+                {
+                    SetFirst();
+                    if (first == 0)
+                    {
+                        RecurseZero(input);
+                    }
+                    else if (first == 1)
+                    {
+                        RecurseOne(input);
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                SetFirst();
+                if (first == 0)
+                {
+                    RecurseZero(input);
+                }
+                else if (first == 1)
+                {
+                    RecurseOne(input);
+                }
+            }
+        }
+
+        private void iterateButton_Click(object sender, EventArgs e)
+        {
+            outputListBox.Items.Clear();
+            decimal input = GetInput();
+            SetFirst();
+            if (first == 0)
+            {
+                IterateZero(input);
+            }
+            else if (first == 1)
+            {
+                IterateOne(input);
+            }
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            ClearOutput();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            // exit the application.
+            this.Close();
+        }
+    }
+}

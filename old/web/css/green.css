@@ -1,0 +1,380 @@
+body {
+	max-width: 1024px;
+	margin: 0 auto;
+	margin-bottom: 2%;
+}
+
+#main_body {
+	max-width: 90%;
+	background-color: #edd;
+	padding: 1%;
+	margin: auto;
+	border: solid #700 5px;
+}
+
+#color_selector {
+	display: inline-table;
+	background-color: #edd;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	font-size: 1.5em;
+	margin: auto;
+	margin-top: 0;
+	margin-bottom: 2%;
+	border: solid #700 5px;
+	padding: 2%;
+}
+
+#color_selector a {
+	text-decoration: none;
+}
+
+#red_selector {
+	display: inline-block;
+	background-color: #edd;
+	color: #500;
+	padding: 2px;
+	border: solid #700 5px;
+	margin: 2px;
+}
+
+#green_selector {
+	display: inline-block;
+	background-color: #ded;
+	color: #050;
+	padding: 2px;
+	border: solid #070 5px;
+	margin: 2px;
+}
+
+#blue_selector {
+	display: inline-block;
+	background-color: #dde;
+	color: #005;
+	padding: 2px;
+	border: solid #007 5px;
+	margin: 2px;
+}
+
+#default_selector {
+	display: inline-block;
+	background-color: #eee;
+	color: #555;
+	padding: 2px;
+	border: solid #555 5px;
+	margin: 2px;
+}
+
+a {
+	color: #f55;
+}
+
+a:hover {
+	color: #f77;
+}
+
+a:visited {
+	color: #f77;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	border: 2px solid #700;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+h2 {
+    text-align: center;
+    color: #edd;
+    font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+    font-size: 1.75em;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #000;
+}
+
+h3 {
+	padding-bottom: 1%;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 800;
+}
+
+.lolite {
+	background-color: #500;
+	color: #edd;
+	border-top: 2px solid #edd;
+	margin: auto;
+	margin-top: 2%;
+}
+
+.nolite {
+	background-color: #c00;
+	border-top: 2px solid #edd;
+	margin: auto;
+}
+
+.no2lite {
+	background-color: #dcc;
+	border-top: 2px solid #edd;
+	margin: auto;
+}
+
+.no2lite a:link {
+	color: #900 !important;
+}
+
+.no2lite a:visited {
+	color: #900 !important;
+}
+
+.s3_left {
+	text-align: left;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fee;
+	font-size: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	padding: 2%;
+}
+
+.s3_right {
+	text-align: right;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fee;
+	font-size: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	padding: 2%;
+}
+
+.s3_block {
+	text-align: center;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #f00;
+	background-color: #700;
+	font-size: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+	padding: 2%;
+	margin: 2%;
+	border: 4px solid #f33; 
+}
+
+.s4_left {
+	text-align: left;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	padding: 1%;
+}
+
+.s4_mid {
+	text-align: center;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	padding: 1%;
+}
+
+.s4_right {
+	text-align: right;
+	font-family: "Goudy Bookletter 1911", "Century Gothic", AppleGothic, Arial, sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	padding: 1%;
+}
+
+.s4_right ul {
+	list-style: square;
+	text-align: left;
+}
+
+.s7_right {
+	text-align: right;
+	font-family: "Goudy Bookletter 1911", "Century Gothic", AppleGothic, Arial, sans-serif;
+	font-size: 1.3em;
+	display: inline-block;
+	vertical-align: middle;
+	float: right;
+	padding: 2%;
+}
+
+.paragraph {
+	font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+}
+.paragraph a {
+	color: #555;
+}
+.paragraph a:hover {
+	color: #aaa;
+}
+.paragraph a:visited {
+	color: #aaa;
+}
+
+.list_table {
+	padding-bottom: 2%;
+	margin: auto;
+	display: table;
+	font-size: 1.1em;
+}
+
+.main_header {
+	display: inline-table;
+	width: 100%;
+}
+
+.mast {
+	display: table-cell;
+	text-align: left;
+	color: #000;
+	font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.mast_nav {
+	display: table-cell;
+	text-align: right;
+	vertical-align: bottom;
+	color: #fff;
+	padding-right: 0;
+	margin-left: 0;
+}
+
+.mast_nav a {
+	color: #edd;
+}
+.mast_nav a:hover {
+	color: #f00;
+}
+.mast_nav a:visited {
+	color: #edd;
+}
+
+.mast_h1 {
+    font-size: 2.25em;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px #aaa;	
+}
+
+.mast_h2 {
+    font-size: 1.25em;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #aaa;
+}
+
+.mast a {
+	color: #222;
+}
+.mast a:hover {
+	color: #555;
+}
+.mast a:visited {
+	color: #555;
+}
+
+.main_news {
+	clear: both;
+	display: block;
+	margin: auto;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+.main_news a {
+	color: #111;
+}
+.main_news a:hover {
+	color: #777;
+}
+.main_news a:visited {
+	color: #777;
+}
+
+.main_h1 {
+    text-align: left;
+    font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+    font-size: 1.5em;
+    font-weight: 900;
+	margin: auto;
+	margin-left: 2%;
+}
+
+.main_h2 {
+    text-align: left;
+    font-family: "Gloria Hallelujah", "Apple Chancery", "Zapf Chancery", "Monotype Corsiva", Georgia, cursive;
+    font-size: 1.25em;
+    font-weight: 600;
+	margin-top: 2%;
+	margin-left: 2%;
+}
+
+.main_block_text {
+	display: inline-block;
+	text-align: left;
+	font-family: "Goudy Bookletter 1911", "Century Gothic", AppleGothic, Arial, sans-serif;
+	font-size: 1.1em;
+	font-weight: 400;
+	margin: auto 2%;
+}
+
+.main_footer {
+	text-align: center;
+	background-color: #700;
+	color: #edd;
+	border-top: 2px solid #edd;
+	margin: auto;
+}
+
+.in_footer_left {
+	text-align: left;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	vertical-align: middle;
+	float: left;
+	padding: 2%;
+}
+
+.in_footer_left a {
+	color: #edd;
+}
+.in_footer_left a:hover {
+	color: #f00;
+}
+.in_footer_left a:visited {
+	color: #edd;
+}
+
+.in_footer_right {
+	text-align: right;
+	font-family: "Yanone Kaffeesatz", "Trebuchet MS", sans-serif;
+	color: #fff;
+	font-size: 1.5em;
+	vertical-align: middle;
+	padding: 2%;
+}
+
+.preformat {
+	white-space: pre;
+	font-family: monospace;
+	font-size: .75em;
+	margin: auto;
+	display: table;
+}
+
+.wires {
+	background-image: url('img/wires_r.jpg');
+	padding: 1%;
+}
