@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     onLoad();
 });
 
+const gradientDown = "linear-gradient(180deg, #002b36, #eee8d5) 10";
+const gradientUp = "linear-gradient(0deg, #002b36, #eee8d5) 10";
+const gradientNone = "#073642";
+
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
 const titleShuffle= async () => {
@@ -27,8 +31,22 @@ const titleShuffle= async () => {
 const tabsListen = () => {
     const tabs = document.querySelectorAll('.mp-sub');
     tabs.forEach(function (tab) {
+        tab.addEventListener('click', borderLight);
         tab.addEventListener('click', nextDivToggle);
     });
+}
+
+const borderLight = (e) => {
+    const nt = e.target.nextElementSibling;
+    const nts = getComputedStyle(nt).getPropertyValue('display');
+    if (nts === 'block') {
+        e.target.style.borderWidth = "1px";
+        e.target.style.background = 'none';
+    } else {
+        e.target.style.borderWidth = "3px 3px 1px 3px";
+        e.target.style.borderImage = gradientDown;
+        e.target.style.background = "linear-gradient(180deg, #002b3615, #fdf6e325)";
+    }
 }
 
 // checks display style of each .mp-item (by referencing nextElementSibling of .mp-sub) and toggles between 'block' and 'none'.

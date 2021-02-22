@@ -55,6 +55,7 @@ hr {
     border: 1px solid #043642;
     padding: 1px;
     background-color: #eee8d5;
+    clear: both;
 }
 
 #controls {
@@ -103,9 +104,12 @@ hr {
 .mp-sub {
     float: left;
     margin: 0 1%;
-    border: 1px solid #002b36;
+    border: 3px solid #002b36;
+    border-bottom: 1px solid #002b36;
+    /* border-image: linear-gradient(0deg, #002b36, #eee8d5) 10; */
+    border-image: linear-gradient(180deg, #002b36, #eee8d5) 10;
     background-color: #002b3675;
-    /* background: linear-gradient(90deg, #002b3615, #fdf6e325); */
+    background: linear-gradient(180deg, #002b3615, #fdf6e325);
     font-weight: bold;
     text-align: left;
     cursor: pointer;
@@ -121,9 +125,9 @@ hr {
     clear: both;
     display: block;
     margin: 1%;
-    border: 1px solid #002b36;
+    border: 1px solid #eee8d5;
     background-color: #002b3650;
-    /* background: linear-gradient(90deg, #002b3615, #fdf6e325); */
+    background: linear-gradient(90deg, #002b3615, #fdf6e325);
     text-align: left;
 }
 
