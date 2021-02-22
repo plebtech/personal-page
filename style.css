@@ -44,6 +44,10 @@ ul, li {
     text-align: left;
 }
 
+ul > .bold {
+    margin-top: 1%;
+}
+
 p {
     border: 1px solid #586e7525;
     background-color: #002b3650;
