@@ -41,6 +41,7 @@ const borderLight = (e) => {
     const nts = getComputedStyle(nt).getPropertyValue('display');
     if (nts === 'block') {
         e.target.style.borderWidth = "1px";
+        e.target.style.borderImage = gradientUp;
         e.target.style.background = 'none';
     } else {
         e.target.style.borderWidth = "3px 3px 1px 3px";
