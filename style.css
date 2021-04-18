@@ -69,8 +69,15 @@ hr {
 }
 #controls > a {
     border: 2px solid #eee8d5;
+    padding: 0px 2px;
+    padding-left: 4px;
     font-size: 1.5em;
     text-decoration: none;
+}
+
+#controls > a:hover {
+    border: 2px solid #fff;
+    color: #fff;
 }
 
 #output {
@@ -106,6 +113,34 @@ hr {
 }
 
 .mp-sub {
+    float: left;
+    margin: 0 1%;
+    border: 3px solid #002b36;
+    border-bottom: 1px solid #002b36;
+    /* border-image: linear-gradient(0deg, #002b36, #eee8d5) 10; */
+    border-image: linear-gradient(180deg, #002b36, #eee8d5) 10;
+    background-color: #002b3675;
+    background: linear-gradient(180deg, #002b3615, #fdf6e325);
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+#hide-all {
+    float: left;
+    margin: 0 1%;
+    border: 3px solid #002b36;
+    border-bottom: 1px solid #002b36;
+    /* border-image: linear-gradient(0deg, #002b36, #eee8d5) 10; */
+    border-image: linear-gradient(180deg, #002b36, #eee8d5) 10;
+    background-color: #002b3675;
+    background: linear-gradient(180deg, #002b3615, #fdf6e325);
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+#show-all {
     float: left;
     margin: 0 1%;
     border: 3px solid #002b36;
@@ -183,4 +218,30 @@ hr {
 
 .bold {
     font-weight: bold;
+}
+
+#slot-machine {
+    font-family: 'VT323', monospace;
+    font-weight: normal;
+    font-size: 4em;
+    opacity: 0.75;
+}
+
+#slot-machine > .offBlink {
+    margin: 0%;
+    padding: 0%;
+    opacity: 0.1;
+    font-family: 'VT323', monospace;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+#slot-machine > .overBlink {
+    margin: 0%;
+    padding: 0%;
+    opacity: 1.0;
+    color: #fff;
+    font-family: 'VT323', monospace;
+    font-weight: normal;
+    font-size: 1em;
 }

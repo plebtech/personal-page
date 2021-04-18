@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="anon">
+    <title>notes - hermitec</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js"></script>
+    <!-- cache fonts from google -->
+    <link rel = "stylesheet" href = "http://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|VT323|Source+Code+Pro" />
+</head>
+
+<body>
+
+    <h1 id="slot-machine">old news.</h1>
+
+    <p style="display: inline-block;">all the news that's fit to bury.</p>
+
+    <!-- <hr /> -->
+
+    <div class="wrap-silent">
+
+        <div class="mp-item">
+            <ul>
+                <li class="bold">sept 26th.</li>
+                <li>- struggled with configuring nginx all last night; couldn't reach 80.</li>
+                <li>- this morning switched to 8080 and could access.</li>
+                <li>- today's goal: open 80 on arch vps.</li>
+                <li>- watched football instead lol.</li>
+                <li class="bold">sept 25th.</li>
+                <li>- registered domain hermitec.com with namecheap.</li>
+                <li>- opened linode account.</li>
+                <li>- followed getting started with linode: <a
+                        href="https://www.linode.com/docs/getting-started/">https://www.linode.com/docs/getting-started/</a>
+                </li>
+                <li>- linode nanode running arch at: <a href="http://45.33.98.178">45.33.98.178</a></li>
+                <li>- added entry to hosts file (etc/hosts).</li>
+                <li>- checked hosts entry in nsswitch.conf file (/etc/nsswitch.conf).</li>
+                <li>- pointed namecheap to linode nameservers.</li>
+                <li>- auto-configured linode dns: <a
+                        href="https://www.linode.com/docs/platform/manager/dns-manager/">https://www.linode.com/docs/platform/manager/dns-manager/</a>
+                </li>
+                <li>- timedatectl set-timezone 'America/Chicago'</li>
+                <li>- added ' source ~/.bash_aliases ' to .bashrc</li>
+                <li class="bold">july 17th.</li>
+                <li>- installed nodejs on test server.</li>
+                <li class="bold">july 12th.</li>
+                <li>- configured test server with openvpn / protonvpn.</li>
+            </ul>
+        </div>
+
+        <div class="mp-item">
+            <ul>
+                <li class="bold">to do.</li>
+                <li class="strike">- hourly chronjob to update the stats via neofetch output.</li>
+                <li>- script appending github links to the latest (five?) news items. this day, this week, this month.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- <hr /> -->
+
+    <h5 style="clear: both;">hosted on a <a href="https://linode.com">linode</a> vps, $5 a month. what a deal!</h5>
+</body>
+
+</html>
