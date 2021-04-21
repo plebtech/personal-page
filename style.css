@@ -1,7 +1,7 @@
 * {
     margin: 1%;
     padding: 1%;
-    font-family: monospace;
+    font-family: 'Consolas', 'Lucida Console', Monaco, monospace;
     color: #fdf6e3;
 }
 
@@ -267,4 +267,14 @@ hr {
 
 li > ul > li {
     margin-left: 3%;
+}
+
+#footer {
+    clear: both;
+    font-family: 'VT323';
+    font-size: 1.1em;
+}
+#footer > a {
+    font-family: 'VT323';
+    font-size: 1.1em;
 }
