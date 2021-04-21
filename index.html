@@ -9,61 +9,84 @@
     <link rel="stylesheet" href="style.css" />
     <script src="scripts.js"></script>
     <!-- cache fonts from google -->
-    <link rel = "stylesheet" href = "//fonts.googleapis.com/css?family=Libre+Barcode+39+Text|VT323|Source+Code+Pro" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Libre+Barcode+39+Text|VT323|Source+Code+Pro" />
 </head>
 
 <body>
 
-    <h1 id="slot-machine">h e r m i t e c . c o m</h1>
+    <h1 id="slot-machine">hermitec.com</h1>
 
-    <p style="display: inline-block;">hosting and administration practice.</p>
+    <!-- <p style="display: inline-block;">hosting and administration practice.</p>
     <p style="display: inline-block;">demonstration.</p>
-    <p style="display: inline-block;">obligatory 'under construction' message, just like the old web!</p>
+    <p style="display: inline-block;">obligatory 'under construction' message, just like the old web!</p> -->
 
     <!-- <hr /> -->
 
-    <div id="controls">
+    <!-- <div id="controls">
+        <a href="dice/dice.html">dice game.</a>
         <a href="notes.html">notes.</a>
         <a href="news.html">old news.</a>
-    </div>
+    </div> -->
 
     <div class="wrap-silent">
 
-        <div id="hide-all">hide all.</div>
-        <div id="show-all">show all.</div>
-        <div class="mp-sub">news.</div>
+        <!-- <div id="hide-all">hide all.</div> -->
+        <!-- <div id="show-all">show all.</div> -->
+        <div class="mp-sub">portfolio.</div>
         <div class="mp-item">
-            <ul>
-                <li class="bold">april 18th.</li>
-                <li>- implemented, configured and tested HTTPS/SSL on 443.</li>
-                <li>- animated title above with a 'blinking terminal' effect.</li>
-                <li>- modified hermbot autodelete feature to catch invites from discord.com as well.</li>
-                <li>- upgraded local test server from devuan ascii to beowulf.</li>
-                <li>- integrated google fonts.</li>
-                <li class="bold">feb 22nd.</li>
-                <li>- minor style tweaks.</li>
-                <li>- condensed news section (this!).</li>
-                <li class="bold">feb 21st.</li>
-                <li>- animated the title, basic. heh.</li>
-                <li>- spruced up content buttons, changed default to hidden (and back to unhidden).</li>
-            </ul>
+        <ul class="news-list">
+            <li class="bold"><a href="dice/dice.html">dice</a>.</li>
+            <li>sequentially generates an arbitrary number of six-sided die, functions to update/destroy either individually or all at once.</li>
+            <li>ported to TypeScript (developed in vanilla JavaScript).</li>
+            <li>github: <a
+                    href="https://github.com/plebtech/ib-lab-ts-dicey-business">https://github.com/plebtech/ib-lab-ts-dicey-business</a>.
+            </li>
+            <li class="bold" style="margin-top:2%;">hermbot.</li>
+            <li>simple custom Discord bot. automoderation, echo, various commands for string manipulation and mathematical algorithms.</li>
+            <li>runs as Node.js application, served via nginx (Debian VPS).</li>
+            <li>written in vanilla JavaScript implementing the discord.js library.</li>
+            <li>github: <a
+                    href="https://github.com/plebtech/hermbot">https://github.com/plebtech/hermbot</a>.
+            </li>
+        </ul>
         </div>
-
-        <div class="mp-sub">to do.</div>
-        <div class="mp-item">
-            <ul>
-                <li>- add font and 'slot machine' effect to title animation.</li>
-                <li>- add hover effect for buttons.</li>
-                <li>- add show all / hide all.</li>
-                <li>- format code class.</li>
-                <li>- server-side includes in nginx (for neofetch stats).</li>
-                <li>- old news section (gather old news from git commits and dump there).</li>
-            </ul>
-        </div>
-
         <div class="mp-sub">music.</div>
         <div class="mp-item"><a href="https://soundcloud.com/user-155644066/tetris-kalinka">kalinka</a> - kalinka track
             from nes tetris, tracked in reaper.</div>
+        <div class="mp-sub collapsed">news.</div>
+        <div class="mp-item" style="display:none">
+            <ul>
+                <li class="bold">april 20th.</li>
+                <li>rearranged items (portfolio -> music -> news (collapsed) -> todo (collapsed)).</li>
+                <li class="bold">april 18th.</li>
+                <li>hosting an old dice project. simulating n six-sided die, written in TypeScript (<a
+                        href="https://github.com/plebtech/ib-lab-ts-dicey-business">github</a>).</li>
+                <li>implemented, configured and tested HTTPS/SSL on 443.</li>
+                <li>animated title above with a 'blinking terminal' effect.</li>
+                <li>modified hermbot autodelete feature to catch invites from discord.com as well.</li>
+                <li>upgraded local test server from devuan ascii to beowulf.</li>
+                <li>integrated google fonts.</li>
+                <li class="bold">feb 22nd.</li>
+                <li>minor style tweaks.</li>
+                <li>condensed news section (this!).</li>
+                <li class="bold">feb 21st.</li>
+                <li>animated the title, basic. heh.</li>
+                <li>spruced up content buttons, changed default to hidden (and back to unhidden).</li>
+            </ul>
+        </div>
+
+        <div class="mp-sub collapsed">to do.</div>
+        <div class="mp-item" style="display:none">
+            <ul>
+                <li>add hover effect for buttons.</li>
+                <li>add show all / hide all.</li>
+                <li>format code class.</li>
+                <li>server-side includes in nginx (for neofetch stats).</li>
+                <li>old news section (gather old news from git commits and dump there).</li>
+            </ul>
+        </div>
+
+        
 
     </div>
 

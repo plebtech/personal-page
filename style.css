@@ -126,6 +126,12 @@ hr {
     cursor: pointer;
 }
 
+.collapsed {
+    border-width: 1px;
+    border-image: linear-gradient(0deg, #002b36, #eee8d5) 10;
+    background: none;
+}
+
 #hide-all {
     float: left;
     margin: 0 1%;
@@ -175,19 +181,32 @@ hr {
 }
 
 .news-list {
-    margin: 1% 2%;
-    padding: 1% 2%;
-    list-style: none;
+    /* margin: 1% 2%; */
+    /* padding: 1% 2%; */
     background-color: #00000015;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    list-style: none;
+    text-align: left;
 }
 
 .news-list > li {
-    margin: 0px 2%;
-    padding: 0px 2%;
+    margin: 0px 1%;
+    padding: 0px 1%;
 }
 
 .news-list > li:before {
     content: " - ";
+}
+
+.news-list > .bold {
+    margin: 0px;
+    padding: 0px;
+}
+
+.news-list > .bold:before {
+    content: none;
 }
 
 .card {
@@ -244,4 +263,8 @@ hr {
     font-family: 'VT323', monospace;
     font-weight: normal;
     font-size: 1em;
+}
+
+li > ul > li {
+    margin-left: 3%;
 }

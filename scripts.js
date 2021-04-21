@@ -80,6 +80,7 @@ const tabsListen = () => {
     });
 }
 
+// changes button appearance based on whether next sibling is visible.
 const borderLight = (e) => {
     const nt = e.target.nextElementSibling;
     const nts = getComputedStyle(nt).getPropertyValue('display');
